@@ -5,7 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { PersonasYClaseComponent } from '../personas-y-clase/personas-y-clase.component';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ListaVuelosComponent } from '../lista-vuelos/lista-vuelos.component';
-import { FormaDePagoComponent } from '../forma-de-pago/forma-de-pago.component';
+import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.component';
 
 
 
