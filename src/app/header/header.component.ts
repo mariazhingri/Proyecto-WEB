@@ -6,7 +6,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { SericiodebtninciosesionService } from '../sericiodebtninciosesion.service';
 import { Subscription } from 'rxjs';
-import { PaginaPrincipalComponent } from '../pagina-principal/pagina-principal.component';
+import { PaginaPrincipalComponent } from '../modulo_vuelos/pagina-principal/pagina-principal.component';
 
 
 @Component({

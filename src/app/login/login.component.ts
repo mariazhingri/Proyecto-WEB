@@ -4,11 +4,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import {NavigationExtras, Router} from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
-import { PaginaPrincipalComponent } from '../pagina-principal/pagina-principal.component';
+import { PaginaPrincipalComponent } from '../modulo_vuelos/pagina-principal/pagina-principal.component';
 import { SericiodebtninciosesionService } from '../sericiodebtninciosesion.service';
 import { Subscription } from 'rxjs';
-import { BusquedaVuelosComponent } from '../busqueda-vuelos/busqueda-vuelos.component';
-
+import { BusquedaVuelosComponent } from '../modulo_vuelos/busqueda-vuelos/busqueda-vuelos.component';
 
 @Component({
   selector: 'app-login',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { FormaDePagoComponent } from '../forma-de-pago/forma-de-pago.component';
+import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.component';
 
 @Component({
   selector: 'app-lista-vuelos',
