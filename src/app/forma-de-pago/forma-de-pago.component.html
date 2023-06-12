@@ -1,0 +1,41 @@
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://kit.fontawesome.com/aab5f7b8b6.js" crossorigin="anonymous"></script>
+</head>
+<div class="contenedor-todo">
+    <p class="texto-titulo"><strong>Forma de pago</strong></p>
+    <div class="imagenes-forma-de-pago">
+
+        <i class="fa-brands fa-cc-visa" style="font-size:xx-large "></i>
+        <i id="iconos" class="fa-brands fa-cc-mastercard" style="font-size:xx-large;"></i>
+        <i id="iconos" class="fa-brands fa-cc-discover" style="font-size:xx-large "></i>
+        <i id="iconos" class="fa-brands fa-cc-diners-club" style="font-size:xx-large "></i>
+        <i id="iconos" class="fa-brands fa-cc-amex" style="font-size:xx-large "></i>
+    </div>
+    <form>
+        <!--input con icono de tarjeta-->
+        <div class="contenedor-tarjeta">
+            <input id="input-tarjeta" class="inputs" type="text" placeholder="Número de tarjeta">
+            <i  id="icono-tarjeta" class="fa-regular fa-credit-card"></i>
+        </div>
+
+        <div>
+            <input class="inputs" id="input-fecha-venc" type="text" placeholder="Fecha de vencimiento">
+            <input class="inputs" id="input-cvv" type="text" placeholder="CVV"> 
+        </div>
+        <input class="inputs"  type="text" placeholder="Nombre">
+        <div>
+        <input class="inputs"  type="text" placeholder="Apellido">
+    </div>
+    <!--parrafo despues del formulario-->
+    <p class="texto">Los pagos se procesarán internacinalmente. es posible que se apliquen
+        comisionnes bancarias adicionales
+    </p>
+    <button class="btn-confirmar">Confirmar</button>
+    </form>
+    
+    
+</div>
+

@@ -1,0 +1,54 @@
+<div class="contenedor-todo">
+    <div class="contenedor-texto">
+        <!--adultos, menores, etc......-->
+        <div class="contenedor-adultos">
+            <div>
+                <h4 class="inline-adultos"><strong>Adultos</strong></h4>
+                
+                <button class="inline-adultos" id="btn-menos" (click)="decrementarContador()"><i class="fa-solid fa-minus"></i></button>
+                <span id="span"class="inline-adultos">{{ contador }}</span>
+                <button id="btn-mas" class="inline-adultos" (click)="incrementarContador()"><i class="fa-solid fa-plus"></i></button>
+                <p>Desde 18 años</p>
+            </div>    
+        </div>
+
+        
+        <div class="contenedor-menores">
+            <h4 class="inline-menores" ><strong>Menores</strong></h4>
+
+            <button class="inline-menores" id="btn-menos-2" (click)="decrementarContador1()"><i class="fa-solid fa-minus"></i></button>
+                <span id="span"class="inline-menores">{{ contador1 }}</span>
+                <button id="btn-mas-2" class="inline-menores" (click)="incrementarContador1()"><i class="fa-solid fa-plus"></i></button>
+            <p>Desde 17 años</p>
+        </div>
+
+        <div class="contenedor-adultos-mayores">
+            <h4 class="inline-menores" ><strong>Adulos mayores</strong></h4>
+            <mat-slide-toggle id="slide-adultos-mayores" class="inline-menores" ></mat-slide-toggle>
+            <p>Desde 65 años</p>
+        </div>
+
+        <div class="contenedor-adultos-mayores">
+            <h4 class="inline-menores" ><strong>Personas con</strong></h4>
+            <mat-slide-toggle id="slide-discapacitados" class="inline-menores" ></mat-slide-toggle>
+            <br><h4 class="inline-menores" ><strong>discapacidad</strong></h4><br/>
+        </div>
+
+        <div class="contenedor-clase">
+            <h4 id="inline-clase"><strong>Clase</strong></h4>
+            <select name="cars" id="inline-clase" class="select-clase">
+                <option value="volvo">Económica</option>
+                <option value="saab">Premium economy</option>
+                <option value="mercedes">Ejecutiva/Business</option>
+                <option value="audi">Primera Clase</option>
+              </select>   
+            
+        </div>
+    </div>    
+        <!--Linea separadora horizontal-->
+        <div class="vertical-horizontal"></div>
+        <!--boton de aplicar-->
+    <div class="contenedor-btn-aplicar">
+        <button class="btn-aplicar">Aplicar</button>
+    </div>    
+</div>

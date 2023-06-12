@@ -1,0 +1,158 @@
+<head>
+  <script src="https://kit.fontawesome.com/aab5f7b8b6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+      
+  <div class="contenedor-todo">
+        
+        <!-- botones de ida, vuelta, multidestino -->
+        <div class="eleccion-vuelos">
+          <p class="letra-vuelo" id="btn-vuelos"><strong>Vuelos</strong></p>
+          <div>
+            <button Class="btn-primero" (click)="abrirsidayvuelta()">Ida y vuelta</button>
+            <button Class="btn-primero" (click)="abrirsoloida()">Solo ida</button>
+            <button Class="btn-primero" (click)="abrirmultidestino()">Multidestino</button>
+          </div>
+        <!-- linea separadora -->
+          <div class="vertical-line"></div>
+          <!-- btn peronas y clase -->
+         <button class="btn-personas-clase" (click)="openDialogpeersonayclase()">
+          <!--<fa-icon [icon]="faUser"></fa-icon>-->
+          <i class="fa-solid fa-user"></i>
+            Personas y Clase
+         </button>
+        </div>
+  
+        <!-- ---------------------------------------------IDA Y VUELTA----------------------------------------------------- -->
+         <!-- inputs y boton de origen y destino -->
+          <div class="contenedor-input" *ngIf="idayvuelta">
+            <div id="inline" class="contenedor-localizacion">
+              <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
+              <input type="text" placeholder="Origen" id="inline" class="input-origen-destino">
+            </div>
+            <button class="btn-cambio" id="btn-cambio">
+             <!-- <fa-icon [icon]="faArrowRightArrowLeft"></fa-icon>--> 
+             <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </button>
+            <div id="inline" class="contenedor-localizacion">
+              <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
+              <input type="text" placeholder="Destino" id="inline" class="input-origen-destino">
+          </div>
+            
+            <!-- botones de fechas -->
+            
+          <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
+          <input  class="input-fechas"  type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
+
+            <button class="btn-cambio" (click)="abrirlista_vuelos()">
+              <!-- <fa-icon [icon]="faMagnifyingGlass"></fa-icon>-->
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+
+         <!-- ---------------------------------------------SOLO IDA----------------------------------------------------- -->
+         <!-- inputs de SOLO IDA-->
+        
+          <div class="contenedor-input" *ngIf="soloida">
+            <div id="inline" class="contenedor-localizacion">
+              <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
+              <input type="text" placeholder="Origen" id="inline" class="input-origen-destino">
+            </div>
+            <button class="btn-cambio" id="btn-cambio">
+              <!--<fa-icon [icon]="faArrowRightArrowLeft"></fa-icon>-->
+              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </button>
+            <div id="inline" class="contenedor-localizacion">
+              <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
+              <input type="text" placeholder="Destino" id="inline" class="input-origen-destino">
+            </div>
+        
+          <!-- botones de fechas -->
+          
+          <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
+          <input  class="input-fechas" disabled style="background-color: #ced0ce;" type="date" id="fecha" name="fecha">
+
+          <button class="btn-cambio">
+            <!--<fa-icon [icon]="faMagnifyingGlass"></fa-icon>-->
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      
+        
+         <!-- ---------------------------------------------MULTIDESTINO----------------------------------------------------- -->
+        <div  class="contenedor-multidestino" *ngIf="multidestino">
+          <div class="contenedor-de-tramo1">
+              <p><strong>Tramo 1</strong></p>
+              <div class="contenedor-input-multidestino">
+                  <div id="inline" class="contenedor-localizacion">
+                  <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
+                  <input type="text" placeholder="Origen" id="inline" class="input-origen-destino">
+                  </div>
+                  <button class="btn-cambio" id="btn-cambio">
+                  <!--<fa-icon [icon]="faArrowRightArrowLeft"></fa-icon>-->
+                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  </button>
+                  <div id="inline" class="contenedor-localizacion">
+                  <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
+                  <input type="text" placeholder="Destino" id="inline" class="input-origen-destino">
+                  </div>
+                  
+                  <!-- botones de fechas -->
+                  
+                  <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
+                  <input  class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
+              </div>
+          </div>
+
+      
+          <!-- segundo tramo -->
+        <div *ngFor="let div of divs"> 
+          <p><strong>Tramo {{ div}}</strong></p>
+          <div class="contenedor-input-multidestino">
+              <div id="inline" class="contenedor-localizacion">
+                <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
+                <input type="text" placeholder="Origen" id="inline" class="input-origen-destino">
+              </div>
+              <button class="btn-cambio" id="btn-cambio">
+                <!--<fa-icon [icon]="faArrowRightArrowLeft"></fa-icon>-->
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              </button>
+              <div id="inline" class="contenedor-localizacion">
+                <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
+                <input type="text" placeholder="Destino" id="inline" class="input-origen-destino">
+              </div>
+              
+              <!-- botones de fechas -->
+              
+              <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
+              <input  class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
+        
+              <button class="btn-eliminar" (click)="eliminarDiv(0)">
+                  <!--<fa-icon [icon]="faXmark" ></fa-icon>-->
+                  <i class="fa-solid fa-xmark" style="color: #d02525; font-size: x-large; "></i>
+                  </button>
+            </div>
+          <!-- botones de agregar tramo y busqueda -->
+          
+      </div>
+      <div class="agregar-tramo">
+        <button class="btn-tramo" (click)="agregarDiv()"> 
+            <!--<fa-icon [icon]="faPlus"></fa-icon>-->  
+            <i class="fa-solid fa-plus"></i>
+            Agregar tramo
+        </button>
+        <button class="btn-tramo" id="btn-buscar">
+            <!--<fa-icon [icon]="faMagnifyingGlass"></fa-icon>-->
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Buscar
+        </button>
+    </div>
+    </div>
+
+  </div>
+  <app-lista-vuelos *ngIf="lista_vuelos"></app-lista-vuelos>
+</body>
+
+
+    

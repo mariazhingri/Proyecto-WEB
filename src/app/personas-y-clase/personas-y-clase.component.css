@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*contenedor contadores */
+.inline-adultos{
+    display: inline;
+}
+#span{
+    padding: 10px 15px 11px 15px;
+    background-color: #e5e5e5;
+    
+    
+}
+#btn-menos{
+    margin-left: 120px;
+    background-color: #e5e5e5;
+    border-radius: 5px 0 0 5px;
+    padding: 10px ;
+    cursor: pointer;
+    border: none;
+    
+}
+#btn-mas{
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+    border-radius: 0 5px 5px 0;
+    padding: 10px ;
+    cursor: pointer;
+    border: none;
+}
+
+/*contenedor texto */
+.contenedor-texto{
+    padding: 15px 10px 20px 30px;
+}
+/*.contenedor-texto p{
+   
+}*/
+
+/*contenedor menores */
+.contenedor-menores{
+    margin-top: 20px;
+}
+.inline-menores{
+    display: inline;
+}
+#btn-menos-2{
+    margin-left: 115px;
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+    border-radius: 5px 0 0 5px;
+    padding: 10px ;
+    cursor: pointer;
+    border: none;
+    
+}
+#btn-mas-2{
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+    border-radius: 0 5px 5px 0;
+    padding: 10px ;
+    cursor: pointer;
+    border: none;
+}
+/*contenedor adultos mayores */
+.contenedor-adultos-mayores{
+    margin-top: 20px;
+}
+#btn-menos-3{
+    margin-left: 57px;
+    border-color: #e5e5e5;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    padding: 10px ;
+    cursor: pointer;
+    border: none;
+    
+}
+#btn-mas-3{
+    border-color: #e5e5e5;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+    padding: 10px ;
+    cursor: pointer;
+    border: none;
+}
+#slide-adultos-mayores{
+    margin-left: 60px;
+}
+/*contenedor personas con discapacidad*/
+#btn-menos-4{
+    margin-left: 77px;
+    border-color: #e5e5e5;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    padding: 10px ;
+    cursor: pointer;
+    border: none;
+    
+}
+#btn-mas-4{
+    border-color: #e5e5e5;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+    padding: 10px ;
+    cursor: pointer;
+    border: none;
+}
+#slide-discapacitados{
+    margin-left: 85px;
+
+}
+/*contenedor clase */
+.contenedor-clase{
+    margin-top: 30px;
+}
+#inline-clase{
+    display: inline;
+}
+.select-clase{
+    margin-left: 100px;
+    border-color: #e5e5e5;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*Linea separadora*/
+.vertical-horizontal {
+    
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+}
+/*boton aplicar*/
+.contenedor-btn-aplicar{
+    text-align: right;
+    margin-right: 30px;
+}
+.btn-aplicar{
+    margin-top: 20px;
+    margin-block-end: 20px;
+}
+.btn-aplicar{
+    margin-left: 10px;
+    padding: 10px 20px 10px 20px;
+    
+    background-color: #ff7800; /* color de boton*/
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+  }
+

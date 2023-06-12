@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2? family=Montserrat:ital,wght@0,300;0,500;0,900;1,300;1,500;1,800&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --orange: #ff7800;
+  --black: #130f40;
+  --sky: #6aa9d5;
+  --blue: #234a66;
+  --light-color: #666;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 0.2em solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --outline-hover: 0.2rem solid var(--black);
+  /* --border: 0.1rem solid rgba(255, 255, 255, 0.2); */
+  --borderlog: rgba(0, 0, 0, 0.3);
+  --transparency: rgba(0, 0, 0, 0.7);
+  --btnhover: rgba(255, 165, 0, 0.2);
+  --form: #666;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+/*-------------------------------------------------*/
+mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+/*-------------------------------------------------*/
+.letra-usuario{
+  margin-left: 200px;
+}
+/*-------------------------------------------------*/
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #130f40;
+  color: #130f40;
+  cursor: pointer;
+  background: none;
+}
+
+.btn:hover {
+  background: #ff7800;
+  color: #fff;
+}
+
+/* Header */
+header {
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2%;
+  /* padding: 2rem 9%; */
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #130f40;
+  font-family: "Poppins", sans-serif;
+}
+
+header .logo img {
+  width: 2px;
+  margin-right: 0.3rem;
+}
+
+header .logo span {
+  color: #ff7800;
+}
+
+header .logo i {
+  color: #ff7800;
+}
+
+header .navbar a {
+  font-size: 1rem;
+  margin: 0 1rem;
+  color: #130f40;
+}
+
+header .navbar a:hover {
+  color: #ff7800;
+}
+
+header .icons div {
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  border-radius: 1rem;
+  background: #eee;
+  color: #130f40;
+  font-size: 1rem;
+  margin-left: 0.3rem;
+  text-align: center;
+}
+
+header .icons div:hover {
+  background: #ff7800;
+  color: #fff;
+}
+
+header .icon div {
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  border-radius: 1rem;
+  background: #eee;
+  color: #130f40;
+  font-size: 1rem;
+  margin-left: 0.3rem;
+  text-align: center;
+}
+
+header .icon div:hover {
+  background: #ff7800;
+  color: #fff;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.navbar {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+}
+
+/* .nav-item::after{
+        content: "";
+        display: block;
+        background: #fff;
+        width: 90%;
+        margin-top: 3px;
+        height: 3px;
+    } */
+
+.nav-input:checked + .navbar {
+  background: rgba(255, 184, 52, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+.nav-label,
+.nav-input {
+  display: none;
+}
+
+.header .navbar {
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  width: 30rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.header .navbar.active {
+  right: 2rem;
+  transition: 0.4s linear;
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+  header .navbar a:hover {
+    font-size: 2rem;
+    text-decoration-line: underline;
+    color: #130f40;
+  }
+  #menu-btn {
+    display: inline-block;
+  }
+  .nav-label {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background: rgba(255, 184, 52, 0.2);
+    backdrop-filter: blur(15px);
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out;
+  }
+
+  .nav-input:checked + .navbar {
+    clip-path: circle(100% at center);
+  }
+
+  header .icon {
+    display: none;
+  }
+}
+
+/*------------------------------------LOGIN-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,100&display=swap');
+
+.contenedor-todo{
+    text-align: center;
+    margin-top: 100px;
+    flex: 1 1 30rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+    margin-left: 400px;
+    margin-right: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+.contenedor-todo p{
+    font-size: 20px;
+}
+.contenedor-contraseña{
+    margin-top: 10px;
+}
+.input{
+    color: black;
+    padding: 15px 0px 15px 42px;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: #ebebeb;
+    border-radius: 6px;
+    font-size:medium;
+    border-style: none;
+}
+.btn-aceptar{
+    margin-top: 10px;
+    width: 35%;
+    padding: 10px;
+    background-color: #ff7800; /* color de boton*/
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+}

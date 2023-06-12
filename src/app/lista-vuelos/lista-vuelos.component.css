@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,100&display=swap');
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    .main {
+      width: 80%;
+      padding: 0;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width: 100%;
+    }
+  }
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor-todo{
+    flex: 1 1 30rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0.3, 0.3, 0.1, 0.1);
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: white;
+    border-radius: 10px;
+    padding:15px;
+    display: flex;
+    margin-top: 30px;
+}
+.letras-1{
+    margin-left: 120px;
+}
+.letras-1-tiempo{
+    margin-left: 85px;
+}
+img {
+    width: 40px;
+    margin-left: 20px;
+    margin-block-end: 10px;
+
+}
+#inline{
+    display: inline;
+}
+.contenedor-1{
+    margin-left: 44px;
+}
+#icono-avion{
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 100px;
+}
+.letra-1-ida{
+    margin-left: 5px;
+}
+/*----------------------LETRAS PEQUEÑAS----------------------*/
+
+.contenedor-sub-letras{
+    margin: 0;
+    display: flex;
+    margin-left: 90PX;
+}
+.sub-letras-1{
+    margin-left: 76px;
+    color: #8b8c89;
+}
+.sub-letras-2{
+    margin-left: 106px;
+    color: #8b8c89;
+}
+/*----------------------IDA----------------------*/
+.contenedor-2{
+    display: flex;
+    margin-top: 15px;
+}
+.letra-latam{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.hora-ida{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.hora-llegada{
+    margin-top: 10px;
+    margin-left: 36px;
+}
+.tiempo-vuelo{
+    margin-top: 10px;
+    margin-left: 98px;
+}
+.vertical-horizontal-2 {
+    height: 1px;
+    width: 10%;
+    background-color: #1b263b;
+}
+#linea-horizontal-2{
+    margin-top: 18px;
+    margin-left: 30px;
+}
+/*----------LINEAS SEPARADORAS--------*/
+.vertical-horizontal {
+    
+    height: 1px;
+    width: 100%;
+    background-color: #e5e5e5;
+}
+.vertical-line {
+   margin-left: 20px;
+    width: 1px;
+    height: 280px;
+    background-color: #e5e5e5;
+  }
+
+
+/*--------------------------------------VUELTA------------------------------*/
+.contenedor-uno{
+    margin-left: 44px;
+}
+.letras-2-vuelta{
+    margin-left: 5px;
+}
+.letras-2{
+    margin-left: 90px;
+}
+.letras-3{
+    margin-left: 120px;
+}
+.letras-4{
+    margin-left: 120px;
+}
+/*----------------------LETRAS PEQUEÑAS----------------------*/
+.contenedor-sub-letras{
+    margin: 0;
+    display: flex;
+    margin-left: 90PX;
+}
+.sub-letras-3{
+    margin-left: 78px;
+    color: #8b8c89;
+}
+.sub-letras-4{
+    margin-left: 104px;
+    color: #8b8c89;
+}
+/*--------------------------------------------*/
+
+.contenedor-3{
+    display: flex;
+    margin-top: 15px;
+}
+.letra-latam-2{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.hora-ida-2{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.hora-llegada-2{
+    margin-top: 10px;
+    margin-left: 26px;
+}
+.tiempo-vuelo-2{
+    margin-top: 10px;
+    margin-left: 96px;
+}
+/*---------------------COMPRAR--------------------*/
+.segunda-parte{
+    margin-left: 15px;
+    
+}
+.contenedor-costo{
+    margin-top: 90px;
+    text-align: right;
+}
+#inline-costo{
+    display: inline; 
+}
+.costo{
+    margin-left: 10px;
+}
+/*********************/
+.contenedor-impuesto-tasas{
+    display: flex;
+}
+.contenedor-impuestos{
+   margin-top: 6px;
+
+}
+.contenedor-impuestos-precio{
+    margin-left: 20px;
+}
+#inline-impuesto{
+    display: inline;
+}
+
+/*********************/
+.contenedor-precio-final{
+    margin-top: 45px;
+    display: flex;
+    text-align: end;
+}
+.contenedor-precio-final-valor{
+    margin-left: 120px;
+}
+.precio-final{
+    margin-left: 5px;
+    margin-top: 6.5px;
+}
+.precio-final-80{
+    margin-left: 5px;
+    font-size: 20px;
+}
+#inline-precio-final{
+    display: inline;
+}
+
+/*********************/
+
+.contenedor-btn{
+    text-align: center;
+}
+.btn-comprar{
+    width: 80%;
+    border-radius: 20px;
+    background-color: #ff7800;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}

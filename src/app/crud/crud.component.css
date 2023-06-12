@@ -1,0 +1,31 @@
+/* Structure */
+
+.contenedor-todo{
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+  
+}
+.contendor-filter{
+    width: 30%;
+    height: 75px;
+    
+}
+#inline{
+    display: inline;
+}
+.contenedor-btn{
+   margin-left: 600px;
+}
+.btn{
+    margin-left: 10px;
+    padding: 18px 20px;
+    background-color: #ff7800; /* color de boton*/
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+}
+
+    
+    
