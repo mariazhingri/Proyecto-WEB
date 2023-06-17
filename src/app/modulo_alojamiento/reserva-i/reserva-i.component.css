@@ -1,0 +1,45 @@
+.reservarConte{
+    width: 500px;
+}
+
+h1{
+    background-image: url('https://img.freepik.com/foto-gratis/plantilla-web-estudio-diseno-diseno-fondo-naranja-abstracto-informe-comercial-color-degradado-circulo-suave_1258-101648.jpg?w=826&t=st=1686510367~exp=1686510967~hmac=268278a18c27eda68388f23c592b31d1ca7d5e69bcf99a526c6bd4dd3e96889f');
+    height: 50px;
+}
+
+.example-action-buttons {
+    padding-bottom: 20px;
+  }
+  
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  .example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+    display: block;
+    width: 197px;
+  }
+
+  .info{
+    display: flex;
+  }
+
+
+.cancelar{
+    background-color: rgba(255, 0, 0, 0.63);
+  }
+
+.aceptar{
+    background-color:#ff7800 ;
+}
+
+.pago{
+  background-color: #ff770093;
+}
+
+.Confirmacion{
+  display: none;
+}
