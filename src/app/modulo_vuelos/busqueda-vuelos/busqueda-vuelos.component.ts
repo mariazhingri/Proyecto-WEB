@@ -29,16 +29,19 @@ export class BusquedaVuelosComponent implements OnInit{
     this.multidestino=true;
     this.idayvuelta=false;
     this.soloida=false;
+    this.lista_vuelos = false;
   }
   abrirsoloida(){
     this.multidestino=false;
     this.idayvuelta=false;
     this.soloida=true;
+    this.lista_vuelos = false;
   }
   abrirsidayvuelta(){
     this.multidestino=false;
     this.idayvuelta=true;
     this.soloida=false;
+    this.lista_vuelos = false;
   }
 
   ngOnInit(): void{

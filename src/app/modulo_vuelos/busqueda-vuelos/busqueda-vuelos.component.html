@@ -73,7 +73,7 @@
           <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
           <input  class="input-fechas" disabled style="background-color: #ced0ce;" type="date" id="fecha" name="fecha">
 
-          <button class="btn-cambio">
+          <button class="btn-cambio" (click)="abrirlista_vuelos()">
             <!--<fa-icon [icon]="faMagnifyingGlass"></fa-icon>-->
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -142,7 +142,7 @@
             <i class="fa-solid fa-plus"></i>
             Agregar tramo
         </button>
-        <button class="btn-tramo" id="btn-buscar">
+        <button class="btn-tramo" id="btn-buscar" (click)="abrirlista_vuelos()">
             <!--<fa-icon [icon]="faMagnifyingGlass"></fa-icon>-->
             <i class="fa-solid fa-magnifying-glass"></i>
             Buscar

@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { BusquedaVuelosComponent } from './modulo_vuelos/busqueda-vuelos/busqueda-vuelos.component';
 import { FormaDePagoComponent } from './forma-de-pago/forma-de-pago.component';
 import { HeaderComponent } from './header/header.component';
-import { PaginaPrincipalComponent } from './modulo_vuelos/pagina-principal/pagina-principal.component';
+import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
 import { PersonasYClaseComponent } from './modulo_vuelos/personas-y-clase/personas-y-clase.component';
 import { LoginComponent } from './login/login.component';
 import { SericiodebtninciosesionService } from './sericiodebtninciosesion.service';
 import { ListaVuelosComponent } from './modulo_vuelos/lista-vuelos/lista-vuelos.component';
+import { EncabezadoComponent } from './modulo_alojamiento/encabezado/encabezado.component';
+import { DestinoComponent } from './modulo_alojamiento/destino/destino.component';
+import { AlojamientoComponent } from './modulo_alojamiento/alojamiento/alojamiento.component';
 
 
 import {MatIconModule} from '@angular/material/icon';
@@ -37,7 +40,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     PaginaPrincipalComponent,
     PersonasYClaseComponent,
     ListaVuelosComponent,
-    
+    EncabezadoComponent,
+    AlojamientoComponent
 
   ],
   imports: [
@@ -51,7 +55,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatToolbarModule,
     MatDialogModule,
     MatTableModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    DestinoComponent
     
   ],
   providers: [SericiodebtninciosesionService],

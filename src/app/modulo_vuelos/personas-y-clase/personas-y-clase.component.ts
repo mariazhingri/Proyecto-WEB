@@ -37,6 +37,10 @@ export class PersonasYClaseComponent implements OnInit{
     }
   /*----------------------------------------*/
 
+  cerrar(){
+    this.dialogRef.close();
+  }
+
   ngOnInit(): void{
 
   }
