@@ -6,12 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./carrito-compra.component.css']
 })
 export class CarritoCompraComponent {
-  /*deleteCard(event: Event): void {
-    const cardElement = (event.target as HTMLElement).closest('.card');
-    if (cardElement) {
-      cardElement.remove();
-    }
-  }*/
 
   deleteCard(event: Event): void {
     const cardElement = (event.target as HTMLElement).closest('.card');
@@ -22,7 +16,6 @@ export class CarritoCompraComponent {
         const messageContainer = document.getElementById('message-container');
         if (messageContainer) {
           messageContainer.textContent = 'No hay reservas.';
-          // Puedes personalizar el mensaje o el estilo según tus necesidades.
         }
       }
     }
