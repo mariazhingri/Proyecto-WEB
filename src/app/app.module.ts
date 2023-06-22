@@ -14,7 +14,9 @@ import { ListaVuelosComponent } from './modulo_vuelos/lista-vuelos/lista-vuelos.
 import { EncabezadoComponent } from './modulo_alojamiento/encabezado/encabezado.component';
 import { DestinoComponent } from './modulo_alojamiento/destino/destino.component';
 import { AlojamientoComponent } from './modulo_alojamiento/alojamiento/alojamiento.component';
-
+import { BodyComponent } from './modulo-packagestrip/body/body.component';
+import { CarouselComponent } from './modulo-packagestrip/carousel/carousel.component';
+import { FooterComponent } from './footer/footer.component';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
@@ -41,7 +43,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     PersonasYClaseComponent,
     ListaVuelosComponent,
     EncabezadoComponent,
-    AlojamientoComponent
+    AlojamientoComponent,
+    BodyComponent,
+    CarouselComponent,
+    FooterComponent
 
   ],
   imports: [

@@ -7,6 +7,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { SericiodebtninciosesionService } from '../sericiodebtninciosesion.service';
 import { Subscription } from 'rxjs';
 import { PaginaPrincipalComponent } from '../pagina-principal/pagina-principal.component';
+import { BodyComponent } from '../modulo-packagestrip/body/body.component';
 
 
 @Component({
