@@ -1,9 +1,10 @@
 <head>
     <script src="https://kit.fontawesome.com/aab5f7b8b6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
+</head>
 
-<div class="contenedor-todo">
+<body>
+    <div class="contenedor-todo">
         <div class="primera-parte">
             <div class="contenedor-1">
                 <div class="fas fa-plane" id="inline"></div>
@@ -23,7 +24,7 @@
             <!-------------------->
             <div class="contenedor-2">
                 <div>
-                    <img src="assets/latam1.png">
+                    <img  class="img-1" src="assets/latam1.png">
                 </div>
                 <div>
                     <P class="letra-latam">LATAM</P>
@@ -60,7 +61,7 @@
             <!-------------------->
             <div class="contenedor-3">
                 <div>
-                    <img src="assets/latam1.png">
+                    <img class="img-1"  src="assets/latam1.png">
                 </div>
                 <div>
                     <P class="letra-latam-2">LATAM</P>
@@ -111,4 +112,111 @@
         </div>
     </div>
 </div> <!-- contenedor todo  -->
+
+ <!------------------------------------------------VIANCA---------------------------------------->
+
+<div class="contenedor-todo">
+    <div class="primera-parte">
+        <div class="contenedor-1">
+            <div class="fas fa-plane" id="inline"></div>
+            <h3 id="inline" class="letra-1-ida">IDA</h3>
+            <h2 id="inline" class="letras-1">GYE</h2>
+            <h2 id="inline" class="letras-1">UIO</h2>
+            <h2 id="inline" class="letras-1-tiempo">TIEMPO</h2>
+            <!---------SUB----------->
+            <div class="contenedor-sub-letras">
+                <h5 id="inline" class="sub-letras-1" >Guayaquil</h5>
+                <h5 id="inline" class="sub-letras-2" >Quito</h5>
+            </div>
+
+        </div>
+        
+        
+        <!-------------------->
+        <div class="contenedor-2">
+            <div class="avianca">
+                <img class="img-avianca" src="assets/img/Avianca-Logo.wine.png">
+            </div>
+            <div>
+                <p class="hora-ida-3">8:00</p>
+            </div>
+            <div class="vertical-horizontal-3" id="linea-horizontal-2"></div>
+            <div>
+                <p class="hora-llegada-3">8:51</p>
+            </div>
+            <div>
+                <p class="tiempo-vuelo-3">0h51m</p>
+            </div>
+        </div>
+        <!---------------------------------------------------------------------------------->
+        <!--Linea separadora horizontal-->
+        <div class="vertical-horizontal"></div>
+        
+        <!------------------vuelta------------>
+        <div class="contenedor-uno" style="margin-top: 20px;">
+            <div class="fas fa-plane fa-rotate-180" id="inline"></div>
+            <h3 id="inline" class="letras-2-vuelta">VUELTA</h3>
+            <h2 id="inline" class="letras-2">GYE</h2>
+            <h2 id="inline" class="letras-3">UIO</h2>
+            <h2 id="inline" class="letras-1-tiempo">TIEMPO</h2>
+
+            <!-------------------->
+            <div class="contenedor-sub-letras">
+                <h5 id="inline" class="sub-letras-3" >Guayaquil</h5>
+                <h5 id="inline" class="sub-letras-4" >Quito</h5>
+            </div>
+        </div>
+        <!-------------------->
+        <div class="contenedor-3">
+            <div class="avianca">
+                <img class="img-avianca" src="assets/img/Avianca-Logo.wine.png">
+            </div>
+            <div>
+                <p class="hora-ida-3">12:48</p>
+            </div>
+            <div class="vertical-horizontal-3" id="linea-horizontal-2"></div>
+            <div>
+                <p class="hora-llegada-3">13:41</p>
+            </div>
+            <div>
+                <p class="tiempo-vuelo-3">0h53m</p>
+            </div>
+        </div>
+        
+        
+    </div>
+    <!--Linea separadora VERTICAL-->
+    <div class="vertical-line"></div>
+
+     <!-------------COMPRA------------------------------------->
+<div class="segunda-parte">
+        <div class="contenedor-costo">
+            <h4 id="inline-costo">USD</h4>
+            <h1 id="inline-costo" class="costo" style="font-size: 30px;">80</h1>
+        </div>
+        <div class="contenedor-impuesto-tasas">
+            <div class="contenedor-impuestos">
+                <h4 id="inline-impuesto">Impuestos, tasas y cargos</h4>
+            </div>
+            <div class="contenedor-impuestos-precio">
+                <h4 id="inline-impuesto">USD</h4>
+                <h1 id="inline-impuesto" style="margin-left: 5px; font-size: 20px;">45</h1>
+            </div>
+        </div>
+        <div class="contenedor-precio-final">
+            <div>
+                <h4  class="precio-final"><strong>Precio final</strong></h4>
+            </div>
+            <div class="contenedor-precio-final-valor">
+                <h5 id="inline-precio-final" class="precio-final-usd"><strong>USD</strong></h5>
+                <h1 id="inline-precio-final"  class="precio-final-80"><strong>125</strong></h1>
+            </div>
+        </div>
+    <div class="contenedor-btn">
+        <button class="btn-comprar" (click)="openDialogformadepagp()">Comprar</button>
+    </div>
+</div>
+</div> <!-- contenedor todo  -->
     
+</body>
+
