@@ -22,7 +22,29 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatTableModule} from '@angular/material/table';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { BodyComponent } from './modulo-packagestrip/body/body.component';
+import { CarouselComponent } from './modulo-packagestrip/carousel/carousel.component';
+import { ReservaComponent } from './modulo-packagestrip/reserva/reserva.component';
+//import { HeaderComponent } from './modulo-packagestrip/header/header.component';
+//import { LoginComponent } from './modulo-packagestrip/login/login.component';
 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FooterComponent } from './footer/footer.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSortModule } from '@angular/material/sort';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTabsModule } from '@angular/material/tabs';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthService } from './services/auth.services';
+//import { FirstComponent } from './modulo-packagestrip/first/first.component';
 
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -37,6 +59,12 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     PaginaPrincipalComponent,
     PersonasYClaseComponent,
     ListaVuelosComponent,
+
+    BodyComponent,
+    CarouselComponent,
+    ReservaComponent,
+    FooterComponent,
+    //FirstComponent,
     
 
   ],
@@ -51,10 +79,27 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     MatToolbarModule,
     MatDialogModule,
     MatTableModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    MatAutocompleteModule,
+    MatCheckboxModule,
+    MatTooltipModule,
+    MatSortModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatTabsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    
     
   ],
-  providers: [SericiodebtninciosesionService],
-  bootstrap: [AppComponent]
+  providers: [SericiodebtninciosesionService, AuthService],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

@@ -1,35 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import {FormControl, Validators, FormsModule, FormBuilder, ReactiveFormsModule} from '@angular/forms';
-import {ThemePalette} from '@angular/material/core';
-import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { MatDialogRef } from '@angular/material/dialog';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ValidatorFn, AbstractControl } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatFormFieldModule } from '@angular/material/form-field';
-
-
-interface Persona {
-  name: string;
-  sound: string;
-}
-
-interface Destino {
-  name: string;
-  sound: string;
-}
-
-
-interface Alojamiento {
-  name: string;
-  sound: string;
-}
-
-interface Servicio {
-  name: string;
-  sound: string;
-}
-
+import {FormControl, Validators, FormGroup, FormBuilder} from '@angular/forms';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.component';
+import { AuthService } from 'src/app/services/auth.services';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reserva',
@@ -38,118 +12,25 @@ interface Servicio {
 })
 export class ReservaComponent implements OnInit{
 
-  destino: any[] = [ 'Guayaquil', 'Quito', 'Galápagos', 'Cuenca'];
+  transporte: any[] = [ 'Tren', 'Avión', 'Carro alquilado', 'Barco'];
   alojamiento: any[] = ['Hotel', 'Apartamento', 'Complejo turístico' ];
   servicio: any[] = ['Actividades', 'Excursiones', 'Guías turísticos' ];
   npersonas: any[] = ['Uno', 'Dos', 'Tres' ];
 
 
-  startDate: FormControl = new FormControl();
-  endDate: FormControl = new FormControl();
-  property1: any;
-  
-  ngOnInit() {
-    this.startDate.setValidators(this.dateValidator());
-    this.endDate.setValidators(this.dateValidator());
-    //this.startDate.setValue(new Date(2023, 0, 1));
-  }
+ // startDate: FormControl = new FormControl();
+  //endDate: FormControl = new FormControl();
 
-
-  toppings = this._formBuilder.group({
-    pepperoni: false,
-    extracheese: false,
-    mushroom: false,
-  });
-
-  constructor(private _formBuilder: FormBuilder,  
-    private dialogRef: MatDialogRef<ReservaComponent>,
-    private snackBar: MatSnackBar, @Inject(MAT_DIALOG_DATA) public data: any) {}
-  
-  cancel(){
-    this.dialogRef.close();
-  }
-
-
-  
-  dateValidator(): ValidatorFn {
-    return (control: AbstractControl): {[key: string]: any} | null => {
-      const startSelectedDate = this.startDate.value;
-      const endSelectedDate = control.value;
-  
-      if (startSelectedDate && endSelectedDate) {
-        const startDate = new Date(startSelectedDate);
-        const endDate = new Date(endSelectedDate);
-  
-        if (startDate > endDate) {
-          return { invalidDateRange: true }; // La fecha de inicio es posterior a la fecha de fin
-        }
-  
-        if (startDate.toDateString() === endDate.toDateString()) {
-          return { sameDate: true }; // Las fechas son iguales
-        }
-      }
-  
-      return null; // Las fechas son diferentes y válidas
-    };
-  }
-  
-
-  //constructor() { }
-
-  personaControl = new FormControl<Persona | null>(null, Validators.required);
-  numpersona = new FormControl('', Validators.required);
-  personas: Persona[] = [
-    {name: 'Uno', sound: '1'},
-    {name: 'Dos', sound: '2'},
-    {name: 'Tres', sound: '3'},
-  ];
-
-
-  destinoControl = new FormControl<Destino | null>(null, Validators.required);
-  tiposdestino = new FormControl('', Validators.required);
-  destinos: Destino[] = [
-    {name: 'Guayaquil', sound: 'Costa'},
-    {name: 'Quito', sound: 'Sierra'},
-    {name: 'Galápagos', sound: 'Insular'},
-    {name: 'Cuenca', sound: 'Sierra'},
-  ];
-
-
-  alojamientoControl = new FormControl<Alojamiento | null>(null, Validators.required);
-  tipoalojamiento = new FormControl('', Validators.required);
-  alojamientos: Alojamiento[] = [
-    {name: 'Hotel', sound: 'Hotel'},
-    {name: 'Apartamento', sound: 'Apartment'},
-    {name: 'Complejo turístico', sound: 'Resorts'},
-  ];
-
-
-  servicioControl = new FormControl<Servicio | null>(null, Validators.required);
-  tiposervicio = new FormControl('', Validators.required);
-  servicios: Servicio[] = [
-    {name: 'Actividades', sound: 'Tourist guides'},
-    {name: 'Excursiones', sound: 'Excursions'},
-    {name: 'Guías turísticos', sound: 'Tourist guides'},
-  ];
-
-
-  myControl = new FormControl('');
-  options: string[] = ['Uno', 'Dos', 'Tres'];
-
-  //startDate = new Date(2023, 0, 1);
-
-  colorControl = new FormControl('primary' as ThemePalette);
-
-  hide = true;
-
-  togglePasswordVisibility(): void {
-    this.hide = !this.hide;
-  }
-
-  name = new FormControl('', [Validators.required]);
-  email = new FormControl('', [Validators.required, Validators.email]);
-  number = new FormControl('', [Validators.required]);
-  cedula = new FormControl('', [Validators.required]);
+  startDateControl = new FormControl('', Validators.required);
+  endDateControl = new FormControl('', Validators.required);
+  name = new FormControl('', Validators.required);
+  email = new FormControl('', Validators.required);
+  number = new FormControl('', Validators.required);
+  cedula = new FormControl('', Validators.required);
+  transporteControl = new FormControl('', Validators.required);
+  alojamientoControl = new FormControl('', Validators.required);
+  servicioControl = new FormControl('', Validators.required);
+  npersonasControl = new FormControl('', Validators.required);
 
 
   getErrorMessageName() {
@@ -186,8 +67,79 @@ export class ReservaComponent implements OnInit{
 
     return this.cedula.hasError('password') ? 'Cédula no válida' : '';
   }
+  
+  getErrorMessageStartDate() {
+    if (this.startDateControl.hasError('required')) {
+      return 'Seleccione la fecha de inicio';
+    }
+    return '';
+  }
+  
+  getErrorMessageEndDate() {
+    if (this.endDateControl.hasError('required')) {
+      return 'Seleccione la fecha de fin';
+    }
+    const endDateValue = this.endDateControl.value ? new Date(this.endDateControl.value) : null;
+    const endDateLimit = new Date('December 31, 2023');
+    endDateLimit.setHours(0, 0, 0, 0);
+    if (endDateValue && endDateValue.getTime() > endDateLimit.getTime()) {
+      return 'La fecha de fin no puede ser posterior al 31 de diciembre de 2023';
+    }
+    return '';
+  }
+  
 
 
+  constructor(private _formBuilder: FormBuilder, 
+    private router: Router,
+    private authService: AuthService,
+    private dialogRef: MatDialogRef<ReservaComponent>,
+    private dialog: MatDialog) {}
+    
+    allFieldsCompleted: boolean = false;
+
+    reservaForm = new FormGroup({
+      name : new FormControl('', Validators.required),
+      email : new FormControl('', Validators.required),
+      number : new FormControl('', Validators.required),
+      cedula : new FormControl('', Validators.required),
+      transporte: this.transporteControl,
+      alojamiento: this.alojamientoControl,
+      servicio: this.servicioControl,
+      npersonas: this.npersonasControl,
+      startDate: this.startDateControl,
+      endDate: this.endDateControl
+    });
+
+
+    cancel() {
+      this.dialogRef.close();
+    }
+
+  
+    openDialog(): void {
+      const dialogRef = this.dialog.open(FormaDePagoComponent, {
+        panelClass: 'custom-dialog-container',
+        width: '500px',
+        height: '490px'
+      });
+    }
+    
+
+    ngOnInit() {
+  }
 
 
 }
+
+
+ /*openDialogPago(): void {
+      const dialogRef = this.dialog.open(FormaDePagoComponent, {
+        // Opciones de configuración del diálogo
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        // Acciones a realizar después de cerrar el diálogo (si es necesario)
+      });
+    
+    }*/

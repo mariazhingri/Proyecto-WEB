@@ -2,9 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
-import { ReservaComponent } from '../reserva/reserva.component';
 import { ActivatedRoute, Router} from '@angular/router';
 import { MatDialogRef } from '@angular/material/dialog';
+import { ReservaComponent } from '../reserva/reserva.component';
+import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.component';
+
+
 
 @Component({
   selector: 'app-body',
@@ -16,10 +19,20 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class BodyComponent implements OnInit {
 
   constructor(private dialog: MatDialog){}
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ReservaComponent, {
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
   
-  openDialog(){
-    this.dialog.open(ReservaComponent) 
   }
+
+  
+  /*openDialog(){
+    this.dialog.open(ReservaComponent) 
+  }*/
   
 
   ngOnInit(): void {

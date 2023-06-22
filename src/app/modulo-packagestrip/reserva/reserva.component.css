@@ -57,7 +57,7 @@
   font-weight: 600;
   background: #130f40;
   display: inline-block;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 2.3rem;
   font-size: 0.8rem;
   border-radius: 5rem;
   color: #fff;
@@ -76,7 +76,7 @@
   font-weight: 600;
   background: #a81100;
   display: inline-block;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 2rem;
   font-size: 0.8rem;
   border-radius: 5rem;
   color: #fff;
@@ -114,9 +114,9 @@
 .content-btn {
     display: flex;
     justify-content: right ;
-    padding-bottom: 1.2rem;
+    padding-bottom: 1rem;
     /* padding-top: .5rem; */
-    padding-right: 1rem;
+    padding-right: .8rem;
     /* padding-left: 2rem; */
   }
 
@@ -148,51 +148,48 @@
 
   .date-container {
     display: flex;
-    /* justify-content: space-between; */
   }
   
   .date-item {
     flex: 1;
     margin-right: 0;
-  /* margin-right: .5rem;  */
   }
     
-  mat-form-field#date {
+mat-form-field#date {
     width: 190px;
 
 }
 
 mat-card-title{
-font-size: 1.5rem;
+  font-size: 1.5rem;
   color: #333;
   text-transform: capitalize;
-  padding: .5rem;
+  padding: .3rem;
   font-family: "Poppins", sans-serif;
 }
 
 mat-card-subtitle{
   font-size: 1rem;
   color: #666;
-  padding-top: .3rem;
-  padding: .5rem;
+  padding-top: .5rem;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 0;
 }
 
 mat-form-field{
     width: 400px;
     padding: .5rem;
     border-radius: 5rem;
-    /* background-color: #66666685; */
     font-family: "Poppins", sans-serif;
-    padding-top: 10px;
+    padding-top: 8px;
     padding-bottom: .5px;
     margin-right: 12px;
     font-size: .8rem;
 }
 
 mat-form-field .matInput {
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-bottom: 3px;
 }
 
 mat-label{
@@ -207,7 +204,13 @@ mat-card-content{
     font-size: 10%;
 }
 
+mat-option{
+  font-size: .9rem;
+}
 
+mat-error{
+  font-size: .6rem;
+}
 
 .content {
     padding: .5rem;
@@ -224,9 +227,12 @@ mat-card-title h3 {
 }
 
 mat-card-subtitle h4 {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: .2rem;
   color: #666;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
 
@@ -234,4 +240,17 @@ mat-card-subtitle h4 {
 .content mat-form-field,
 .content input {
   display: block;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    flex-direction: column;
+  }
+  
+  .row {
+    margin-right: 0;
+  }
 }

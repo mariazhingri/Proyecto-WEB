@@ -7,6 +7,16 @@ import { PersonasYClaseComponent } from './modulo_vuelos/personas-y-clase/person
 import { BusquedaVuelosComponent } from './modulo_vuelos/busqueda-vuelos/busqueda-vuelos.component';
 import { HeaderComponent } from './header/header.component';
 import { ListaVuelosComponent } from './modulo_vuelos/lista-vuelos/lista-vuelos.component';
+import { BodyComponent } from './modulo-packagestrip/body/body.component';
+import { CarouselComponent } from './modulo-packagestrip/carousel/carousel.component';
+import { ReservaComponent } from './modulo-packagestrip/reserva/reserva.component';
+//import { LoginComponent } from './modulo-packagestrip/login/login.component';
+//import { HeaderComponent } from './modulo-packagestrip/header/header.component';
+//import { FirstComponent } from './modulo-packagestrip/first/first.component';
+
+
+
+
 
 const routes: Routes = [
   {path: '',component: PaginaPrincipalComponent},
@@ -17,6 +27,9 @@ const routes: Routes = [
   { path: 'BusquedaVuelosComponent', component: BusquedaVuelosComponent },
   { path: 'HeaderComponent', component: HeaderComponent },
   { path: 'ListaVuelosComponent', component: ListaVuelosComponent },
+  { path: 'BodyComponent', component: BodyComponent },
+  { path: 'CarouselComponent', component: CarouselComponent },
+  { path: 'ReservaComponent', component: ReservaComponent },
 ];
 
 @NgModule({
