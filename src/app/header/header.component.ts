@@ -6,7 +6,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { SericiodebtninciosesionService } from '../sericiodebtninciosesion.service';
 import { Subscription } from 'rxjs';
-import { PaginaPrincipalComponent } from '../modulo_vuelos/pagina-principal/pagina-principal.component';
+import { PaginaPrincipalComponent } from '../pagina-principal/pagina-principal.component';
+import { BodyComponent } from '../modulo-packagestrip/body/body.component';
 
 
 @Component({
@@ -46,6 +47,16 @@ export class HeaderComponent implements OnInit, OnDestroy{
     this.subscription.unsubscribe();
   }
   /*---------------------------------------------------*/
+  abrir_alojamiento(){
+    this.router.navigate(['/AlojamientoComponent']);
+  }
+  abrir_vuelos(){
+    this.router.navigate(['/BusquedaVuelosComponent']);
+  }
+  abrir_paquetes_viajes(){
+    this.router.navigate(['/PaginaPrincipalComponent']);
+  }
+
   /*---------------------------------------------------*/
 
   openDialogSesion(){
