@@ -12,7 +12,7 @@
     ><i class="fi fi-sr-plane"></i> Travel<span>To</span>
   </a>
 
-  <nav class="navbar">
+  <nav class="navbar" *ngIf="navElementSubject">
 
     <a routerLink="/BusquedaVuelosComponent">Vuelos</a>
     <a routerLink="/AlojamientoComponent">Alojamientos</a>
@@ -27,7 +27,7 @@
     <div class="fas fa-search" id="search-btn"></div>
     <div class="fas fa-shopping-cart" id="cart-btn"></div>
     <div *ngIf="showFirstElement" class="fas fa-user" id="login-btn" (click)="openDialogSesion()" ></div>
-    <div *ngIf="showSecondElement" class="fa-solid fa-right-from-bracket" (click)="cerrarsesion()" style="color: white; background-color: #ce2c2c;" id="login-btn" ></div>
+    <div *ngIf="showSecondElement" class="fa-solid fa-right-from-bracket" (click)="cerrarsesion()" style="color: white; background-color: #ce2c2c; cursor: pointer;" id="login-btn" ></div>
     
     
 

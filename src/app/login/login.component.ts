@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit{
       this.headerService.toggleSecondElement(true); // Oculta el segundo elemento en el componente "header"
       this.headerService.togglemostrarusuario(true);
       this.headerService.setNombreUsuario("grupo10");
+      this.headerService.togglenavtElement(true);
     }
     else
     {

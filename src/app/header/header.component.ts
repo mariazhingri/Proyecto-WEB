@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
   showFirstElement: boolean = true;
   showSecondElement: boolean = false;
   mostrarUsuario: boolean = false;
+  navElementSubject: boolean = false;
   
   private subscription: Subscription;
 
@@ -40,6 +41,10 @@ export class HeaderComponent implements OnInit, OnDestroy{
     });
     this.subscription.add(this.headerService.mostrarUsuario$.subscribe(show => {
       this.mostrarUsuario = show;
+    }));
+
+    this.subscription.add(this.headerService.navElementSubject$.subscribe(show => {
+      this.navElementSubject = show;
     }));
   }
 
