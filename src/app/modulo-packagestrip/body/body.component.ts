@@ -5,8 +5,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router} from '@angular/router';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ReservaComponent } from '../reserva/reserva.component';
-import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
+import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.component';
 
 
 @Component({
@@ -17,17 +18,27 @@ import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.compon
 
 
 export class BodyComponent implements OnInit {
+  snackbar: any;
 
-  constructor(private dialog: MatDialog){}
+  constructor(private dialog: MatDialog, private snackBar: MatSnackBar){}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ReservaComponent, {
     });
-
-    dialogRef.afterClosed().subscribe(result => {
-    });
   
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.snackBar.open('Datos completados con éxito', '', {
+          duration: 3000
+        });
+      } else {
+        this.snackBar.open('Reserva cancelada', '', {
+          duration: 3000
+        });
+      }
+    });
   }
+  
 
   
   /*openDialog(){
