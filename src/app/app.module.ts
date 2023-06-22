@@ -46,6 +46,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './services/auth.services';
+import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
+
 //import { FirstComponent } from './modulo-packagestrip/first/first.component';
 
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -66,6 +68,7 @@ import { AuthService } from './services/auth.services';
     CarouselComponent,
     ReservaComponent,
     FooterComponent,
+    CarritoCompraComponent,
     //FirstComponent,
     
     EncabezadoComponent,
