@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { AlertsFormaPagoComponent } from '../Alerts/alerts-forma-pago/alerts-forma-pago.component';
 
 
 @Component({
@@ -9,8 +10,12 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class FormaDePagoComponent implements OnInit {
   
-  constructor(private dialogRef: MatDialogRef<FormaDePagoComponent>){}
+  constructor(private dialogRef: MatDialogRef<FormaDePagoComponent>, private dialog:MatDialog){}
 
+  abrir_alerta(){
+    this.dialog.open(AlertsFormaPagoComponent)
+    this.dialogRef.close();
+  }
   ngOnInit(): void{
 
   }

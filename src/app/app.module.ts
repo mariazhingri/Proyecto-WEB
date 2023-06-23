@@ -14,6 +14,7 @@ import { ListaVuelosComponent } from './modulo_vuelos/lista-vuelos/lista-vuelos.
 import { EncabezadoComponent } from './modulo_alojamiento/encabezado/encabezado.component';
 import { DestinoComponent } from './modulo_alojamiento/destino/destino.component';
 import { AlojamientoComponent } from './modulo_alojamiento/alojamiento/alojamiento.component';
+import { AlertsFormaPagoComponent } from './Alerts/alerts-forma-pago/alerts-forma-pago.component';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
@@ -27,8 +28,6 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { BodyComponent } from './modulo-packagestrip/body/body.component';
 import { CarouselComponent } from './modulo-packagestrip/carousel/carousel.component';
 import { ReservaComponent } from './modulo-packagestrip/reserva/reserva.component';
-//import { HeaderComponent } from './modulo-packagestrip/header/header.component';
-//import { LoginComponent } from './modulo-packagestrip/login/login.component';
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -46,8 +45,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './services/auth.services';
-//import { FirstComponent } from './modulo-packagestrip/first/first.component';
 
+//import { FirstComponent } from './modulo-packagestrip/first/first.component';
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
@@ -61,7 +60,7 @@ import { AuthService } from './services/auth.services';
     PaginaPrincipalComponent,
     PersonasYClaseComponent,
     ListaVuelosComponent,
-
+    
     BodyComponent,
     CarouselComponent,
     ReservaComponent,
@@ -72,7 +71,8 @@ import { AuthService } from './services/auth.services';
     AlojamientoComponent,
     BodyComponent,
     CarouselComponent,
-    FooterComponent
+    FooterComponent,
+    AlertsFormaPagoComponent
 
   ],
   imports: [
@@ -102,7 +102,7 @@ import { AuthService } from './services/auth.services';
     FormsModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-
+    
     DestinoComponent
 
     
