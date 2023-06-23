@@ -17,7 +17,7 @@
     <a routerLink="/BusquedaVuelosComponent">Vuelos</a>
     <a routerLink="/AlojamientoComponent">Alojamientos</a>
     <a routerLink="/BodyComponent">Paquetes de viaje</a>
-    <!-- <a href="#">Paquetes de viaje</a> -->
+    <!-- <a href="#">Paquetes de viaje</a> --> 
 
    <p *ngIf="mostrarUsuario" class="letra-usuario"> Bienvenid@, {{ nombreUsuario}} </p>
   </nav>
@@ -25,7 +25,7 @@
   <div class="icons">
     <div class="fas fa-bars" id="menu-btn"></div>
     <div class="fas fa-search" id="search-btn"></div>
-    <div class="fas fa-shopping-cart" id="cart-btn"></div>
+    <div routerLink="/CarritoCompraComponent" class="fas fa-shopping-cart" id="cart-btn"></div>
     <div *ngIf="showFirstElement" class="fas fa-user" id="login-btn" (click)="openDialogSesion()" ></div>
     <div *ngIf="showSecondElement" class="fa-solid fa-right-from-bracket" (click)="cerrarsesion()" style="color: white; background-color: #ce2c2c; cursor: pointer;" id="login-btn" ></div>
     

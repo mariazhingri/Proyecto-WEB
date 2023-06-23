@@ -15,7 +15,7 @@ export class ReservaComponent implements OnInit{
   transporte: any[] = [ 'Tren', 'Avión', 'Carro alquilado', 'Barco'];
   alojamiento: any[] = ['Hotel', 'Apartamento', 'Complejo turístico' ];
   servicio: any[] = ['Actividades', 'Excursiones', 'Guías turísticos' ];
-  npersonas: any[] = ['Uno', 'Dos', 'Tres' ];
+  npersonas: any[] = ['Dos', 'Tres', 'Cuatro' ];
 
 
  // startDate: FormControl = new FormControl();
