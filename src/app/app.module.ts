@@ -48,6 +48,7 @@ import { AuthService } from './services/auth.services';
 import { DatosComponent } from './modulo-packagestrip/datos/datos.component';
 
 import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
+import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
 
 //import { FirstComponent } from './modulo-packagestrip/first/first.component';
 //import { LoginComponent } from './modulo-packagestrip/login/login.component';
@@ -78,6 +79,8 @@ import { CarritoCompraComponent } from './carrito-compra/carrito-compra.componen
     CarouselComponent,
     FooterComponent,
     AlertsFormaPagoComponent,
+    TicketsComponent
+
   ],
   imports: [
     BrowserModule,

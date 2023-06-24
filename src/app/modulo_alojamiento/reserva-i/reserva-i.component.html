@@ -1,3 +1,11 @@
+<head>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://kit.fontawesome.com/aab5f7b8b6.js" crossorigin="anonymous"></script>
+</head>
+
 <!-- Informacion de la reserva -->
 <div *ngIf="reservaInformacion"  class="reservarConte">
     <h1 mat-dialog-title>Reservar</h1>
@@ -37,7 +45,7 @@
                 
                     <mat-form-field>
                       <mat-label>Teléfono</mat-label>
-                      <input matInput >
+                      <input matInput required>
                     </mat-form-field>    
                 </div>
               <!-- </form>  -->
@@ -52,7 +60,39 @@
                   <mat-icon>attach_money</mat-icon>
                 </mat-panel-description>
               </mat-expansion-panel-header>
-              <button mat-raised-button class="pago">Pagar</button>
+              <div class="contenedor-todo">
+                <p class="texto-titulo"><strong>Forma de pago</strong></p>
+                <div class="imagenes-forma-de-pago">
+            
+                    <i class="fa-brands fa-cc-visa" style="font-size:xx-large "></i>
+                    <i id="iconos" class="fa-brands fa-cc-mastercard" style="font-size:xx-large;"></i>
+                    <i id="iconos" class="fa-brands fa-cc-discover" style="font-size:xx-large "></i>
+                    <i id="iconos" class="fa-brands fa-cc-diners-club" style="font-size:xx-large "></i>
+                    <i id="iconos" class="fa-brands fa-cc-amex" style="font-size:xx-large "></i>
+                </div>
+                <form>
+                    <!--input con icono de tarjeta-->
+                    <div class="contenedor-tarjeta">
+                        <input id="input-tarjeta" class="inputs" type="text" placeholder="Número de tarjeta">
+                        <i  id="icono-tarjeta" class="fa-regular fa-credit-card"></i>
+                    </div>
+            
+                    <div>
+                        <input class="inputs" id="input-fecha-venc" type="text" placeholder="Fecha de vencimiento">
+                        <input class="inputs" id="input-cvv" type="text" placeholder="CVV"> 
+                    </div>
+                    <input class="inputs"  type="text" placeholder="Nombre">
+                    <div>
+                    <input class="inputs"  type="text" placeholder="Apellido">
+                </div>
+                <!--parrafo despues del formulario-->
+                <p class="texto">Los pagos se procesarán internacionalmente. es posible que se apliquen
+                    comisiones bancarias adicionales
+                </p>
+                </form>
+                
+                
+            </div>
             </mat-expansion-panel>
           </mat-accordion>
         
@@ -62,7 +102,3 @@
       <button mat-button class="aceptar" (click)="openDialog()">Aceptar</button>
     </div>
 </div>
-
-
-
-

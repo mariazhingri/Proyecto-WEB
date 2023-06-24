@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { LoginComponent } from '../login/login.component';
 import { DatosComponent } from '../modulo-packagestrip/datos/datos.component';
+import { TicketsComponent } from '../modulo_vuelos/tickets/tickets.component';
+
 
 @Component({
   selector: 'app-carrito-compra',
@@ -11,6 +12,7 @@ import { DatosComponent } from '../modulo-packagestrip/datos/datos.component';
 })
 export class CarritoCompraComponent {
   constructor(private dialog: MatDialog, private router: Router) {}
+
 
   deleteCard(event: Event): void {
     const cardElement = (event.target as HTMLElement).closest('.card');
@@ -25,6 +27,12 @@ export class CarritoCompraComponent {
       }
     }
   }
+
+  
+  abrir_tickets() {
+    this.dialog.open(TicketsComponent);
+  }
+
 
   openDialogPackTrip() {
     this.dialog.open(DatosComponent);
