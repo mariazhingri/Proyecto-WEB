@@ -118,9 +118,8 @@ export class ReservaComponent implements OnInit{
   
     openDialog(): void {
       const dialogRef = this.dialog.open(FormaDePagoComponent, {
-        panelClass: 'custom-dialog-container',
         width: '500px',
-        height: '490px'
+        height: '490px',
       });
     }
     

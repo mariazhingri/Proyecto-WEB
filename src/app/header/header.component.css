@@ -151,6 +151,12 @@ header .icon div:hover {
   gap: 2rem;
 }
 
+.disabled {
+  opacity: 0.5; /* Cambia el valor según el efecto visual deseado */
+  pointer-events: none;
+}
+
+
 /* .nav-item::after{
         content: "";
         display: block;
