@@ -37,9 +37,7 @@
     
 
 }
-.boarding-pass{
-    
-}
+
 /*------------PRIMERA SECCION----------------------*/
 .boarding-pass-1{
   display: flex;
@@ -60,7 +58,11 @@
   margin-left: 200px;
   margin-right: 25px;
 }
+/*--------------------------SEGUNDA SECCION-------------------*/
 /*---------------------DATOS DE VUELO--------------------*/
+.datos-vuelo{
+  margin-block-end: 15px;
+}
 .sub-seccion{
   display: flex;
   margin-top: 30px;
@@ -83,7 +85,9 @@
   
 }
 /*-----------------------*/
-
+.espacio-letras{
+  margin: 0.2em;
+}
 /*-------------------CONTENEDOR SALIDA*----------------*/
 .contenedor-llegada{
   margin-left: 50px;
