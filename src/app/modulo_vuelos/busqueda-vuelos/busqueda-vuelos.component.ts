@@ -72,6 +72,7 @@ export class BusquedaVuelosComponent implements OnInit{
 
   /*-------------------------------BOTON BUSQUEDA ---> ABRIR COMPONENTE LISTA DE VUELOS---------------------------------------*/
   lista_vuelos = false;
+  
   abrirlista_vuelos(){
     this.lista_vuelos = true;
   }
