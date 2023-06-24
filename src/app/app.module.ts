@@ -47,6 +47,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './services/auth.services';
 
 import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
+import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
 
 //import { FirstComponent } from './modulo-packagestrip/first/first.component';
 
@@ -77,7 +78,8 @@ import { CarritoCompraComponent } from './carrito-compra/carrito-compra.componen
     BodyComponent,
     CarouselComponent,
     FooterComponent,
-    AlertsFormaPagoComponent
+    AlertsFormaPagoComponent,
+    TicketsComponent
 
   ],
   imports: [
