@@ -16,15 +16,15 @@ import { DestinoComponent } from './modulo_alojamiento/destino/destino.component
 import { AlojamientoComponent } from './modulo_alojamiento/alojamiento/alojamiento.component';
 import { AlertsFormaPagoComponent } from './Alerts/alerts-forma-pago/alerts-forma-pago.component';
 
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatTableModule} from '@angular/material/table';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatTableModule } from '@angular/material/table';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BodyComponent } from './modulo-packagestrip/body/body.component';
 import { CarouselComponent } from './modulo-packagestrip/carousel/carousel.component';
 import { ReservaComponent } from './modulo-packagestrip/reserva/reserva.component';
@@ -45,15 +45,14 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './services/auth.services';
+import { DatosComponent } from './modulo-packagestrip/datos/datos.component';
 
 import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
 import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
 
 //import { FirstComponent } from './modulo-packagestrip/first/first.component';
-
-//import { FirstComponent } from './modulo-packagestrip/first/first.component';
+//import { LoginComponent } from './modulo-packagestrip/login/login.component';
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 
 @NgModule({
   declarations: [
@@ -65,14 +64,15 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     PaginaPrincipalComponent,
     PersonasYClaseComponent,
     ListaVuelosComponent,
-    
+
     BodyComponent,
     CarouselComponent,
     ReservaComponent,
     FooterComponent,
     CarritoCompraComponent,
+    DatosComponent,
     //FirstComponent,
-    
+
     EncabezadoComponent,
     AlojamientoComponent,
     BodyComponent,
@@ -109,13 +109,10 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     FormsModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    
-    DestinoComponent
 
-    
+    DestinoComponent,
   ],
   providers: [SericiodebtninciosesionService, AuthService],
   bootstrap: [AppComponent],
-  
 })
-export class AppModule { }
+export class AppModule {}

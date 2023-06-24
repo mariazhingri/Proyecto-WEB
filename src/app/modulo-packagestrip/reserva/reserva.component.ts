@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class ReservaComponent implements OnInit{
 
-  transporte: any[] = [ 'Tren', 'Avión', 'Carro alquilado', 'Barco'];
+  transporte: any[] = [ 'Tren', 'Avión', 'Carro alquilado'];
   alojamiento: any[] = ['Hotel', 'Apartamento', 'Complejo turístico' ];
   servicio: any[] = ['Actividades', 'Excursiones', 'Guías turísticos' ];
   npersonas: any[] = ['Dos', 'Tres', 'Cuatro' ];
@@ -56,7 +56,7 @@ export class ReservaComponent implements OnInit{
       return 'Debe introducir su telefóno';
     }
 
-    return this.number.hasError('password') ? 'Telefóno no válido' : '';
+    return this.number.hasError('number') ? 'Telefóno no válido' : '';
   }
 
   getErrorMessageCedula() {
@@ -65,7 +65,7 @@ export class ReservaComponent implements OnInit{
       return 'Debe introducir su cédula de identidad';
     }
 
-    return this.cedula.hasError('password') ? 'Cédula no válida' : '';
+    return this.cedula.hasError('cedula') ? 'Cédula no válida' : '';
   }
   
   getErrorMessageStartDate() {
@@ -79,16 +79,15 @@ export class ReservaComponent implements OnInit{
     if (this.endDateControl.hasError('required')) {
       return 'Seleccione la fecha de fin';
     }
-    const endDateValue = this.endDateControl.value ? new Date(this.endDateControl.value) : null;
+    return '';
+  }
+  
+/*const endDateValue = this.endDateControl.value ? new Date(this.endDateControl.value) : null;
     const endDateLimit = new Date('December 31, 2023');
     endDateLimit.setHours(0, 0, 0, 0);
     if (endDateValue && endDateValue.getTime() > endDateLimit.getTime()) {
       return 'La fecha de fin no puede ser posterior al 31 de diciembre de 2023';
-    }
-    return '';
-  }
-  
-
+    }*/
 
   constructor(private _formBuilder: FormBuilder, 
     private router: Router,
@@ -119,9 +118,8 @@ export class ReservaComponent implements OnInit{
   
     openDialog(): void {
       const dialogRef = this.dialog.open(FormaDePagoComponent, {
-        panelClass: 'custom-dialog-container',
         width: '500px',
-        height: '490px'
+        height: '490px',
       });
     }
     

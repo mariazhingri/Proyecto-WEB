@@ -6,16 +6,9 @@
 
 
 <h1 class="heading">
-  <span>c</span>
-  <span>a</span>
-  <span>r</span>
-  <span>r</span>
+  <span>m</span>
   <span>i</span>
-  <span>t</span>
-  <span>o</span>
-  <span class="space"> </span>
-  <span>d</span>
-  <span>e</span>
+  <span>s</span>
   <span class="space"> </span>
   <span>c</span>
   <span>o</span>
@@ -23,6 +16,7 @@
   <span>p</span>
   <span>r</span>
   <span>a</span>
+  <span>s</span>
 </h1>
 
 <div class="grid-container">
@@ -37,7 +31,7 @@
       <div class="header-wrapper">
         <h3><i class="fas fa-map-marker-alt"></i> quito</h3>
         <div class="icons">
-        <div class="fa-solid fa-trash-can" id="delete" (click)="deleteCard($event)"></div></div>
+        <div class="fa-solid fa-trash-can" id="delete" (click)="deleteCard($event)" matTooltip="Eliminar"></div></div>
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
@@ -53,22 +47,22 @@
 
       <div class="user-info">
         <h4 class="user-name">
-          <i class="fa-solid fa-address-card"></i>Cédula:
+          <i class="fa-solid fa-address-card"></i> Cédula:
         </h4>
         <p class="nombre">0145687852</p>
       </div>
       
       <div class="user-info">
         <h4 class="user-name">
-          <i class="fa-solid fa-people-group"></i>  Número de personas:
+          <i class="fa-solid fa-people-group"></i> Número de personas:
         </h4>
         <p class="nombre">4 (cuatro)</p>
       </div>
       
       <div class="icons">
-        <div class="fa-solid fa-hotel"></div>
-        <div class="fa-solid fa-plane" (click)=" abrir_tickets()"></div>
-        <div class="fa-solid fa-suitcase"></div>
+        <div class="fa-solid fa-plane" (click)= "abrir_tickets()" matTooltip="Vuelos"></div>
+        <div class="fa-solid fa-hotel" matTooltip="Alojamietos"></div>
+        <div (click)="openDialogPackTrip()" class="fa-solid fa-suitcase" matTooltip="Paquetes de viaje"></div>
       </div>
 
     </mat-card-content>
@@ -85,7 +79,7 @@
       <div class="header-wrapper">
         <h3><i class="fas fa-map-marker-alt"></i> cuenca</h3>
         <div class="icons">
-        <div class="fa-solid fa-trash-can" id="delete" (click)="deleteCard($event)"></div></div>
+        <div class="fa-solid fa-trash-can" id="delete" (click)="deleteCard($event)" matTooltip="Eliminar"></div></div>
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
@@ -114,9 +108,14 @@
       </div>
       
       <div class="icons">
+
         <div class="fa-solid fa-hotel"></div>
         <div class="fa-solid fa-plane" (click)=" abrir_tickets()"></div>
         <div class="fa-solid fa-suitcase"></div>
+
+        <div class="fa-solid fa-plane" (click)= "abrir_tickets()" matTooltip="Vuelos"></div>
+        <div class="fa-solid fa-hotel" matTooltip="Alojamietos"></div>
+        <div (click)="openDialogPackTrip()" class="fa-solid fa-suitcase" matTooltip="Paquetes de viaje"></div>
       </div>
 
     </mat-card-content>
@@ -136,7 +135,7 @@
       <div class="header-wrapper">
         <h3><i class="fas fa-map-marker-alt"></i> cotopaxi</h3>
         <div class="icons">
-        <div class="fa-solid fa-trash-can" id="delete" (click)="deleteCard($event)"></div></div>
+        <div class="fa-solid fa-trash-can" id="delete" (click)="deleteCard($event)" matTooltip="Eliminar"></div></div>
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
@@ -147,7 +146,7 @@
         <h4 class="user-name">
           <i class="fa-solid fa-user"></i> Nombre:
         </h4>
-        <p class="nombre">Ivette Zamora</p>
+        <p class="nombre">Maria Zhingri</p>
       </div>
 
       <div class="user-info">
@@ -165,9 +164,13 @@
       </div>
       
       <div class="icons">
+
         <div class="fa-solid fa-hotel"></div>
         <div class="fa-solid fa-plane" (click)=" abrir_tickets()"></div>
         <div class="fa-solid fa-suitcase"></div>
+        <div class="fa-solid fa-plane" (click)= "abrir_tickets()" matTooltip="Vuelos"></div>
+        <div class="fa-solid fa-hotel" matTooltip="Alojamietos"></div>
+        <div (click)="openDialogPackTrip()" class="fa-solid fa-suitcase" matTooltip="Paquetes de viaje"></div>
       </div>
 
     </mat-card-content>
