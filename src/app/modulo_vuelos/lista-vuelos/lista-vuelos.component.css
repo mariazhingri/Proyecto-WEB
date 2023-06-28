@@ -1,25 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,100&display=swap');
-@media only screen and (max-width:800px) {
-    /* For tablets: */
-    .main {
-      width: 80%;
-      padding: 0;
-    }
-    .right {
-      width: 100%;
-    }
-  }
-  @media only screen and (max-width:500px) {
-    /* For mobile phones: */
-    .menu, .main, .right {
-      width: 100%;
-    }
-  }
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
 
 body{
     align-items: center;
@@ -264,4 +243,195 @@ body{
     width: 80px;
     margin-left: 40px;
     margin-block-end: 10px;
+}
+
+@media screen and (min-width: 1216px ) and (max-width: 1442px) {
+    body{
+        margin:0;
+    }
+    .contenedor-todo{
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 20px;
+        margin-block-end: 10px;
+        
+    }
+
+}
+@media screen and (min-width: 800px) and (max-width: 900px) {
+    body{
+        margin:0;
+    }
+    .contenedor-todo{
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-block-end: 10px;
+        display: grid;
+        flex-direction: column;
+        
+    }
+    .vertical-line {
+        display: none;
+      }
+    .duplicado{
+        height: 1px;
+        width: 100%;
+        background-color: #e5e5e5;
+    }
+    .contenedor-costo{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+    body{
+        margin:0;
+    }
+    .contenedor-todo{
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-block-end: 10px;
+        display: grid;
+        flex-direction: column;
+        
+    }
+    .vertical-line {
+        display: none;
+      }
+    .duplicado{
+        height: 1px;
+        width: 100%;
+        background-color: #e5e5e5;
+    }
+    .contenedor-costo{
+        margin-top: 10px;
+
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+    body{
+        margin:0;
+    }
+    .contenedor-todo{
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-block-end: 10px;
+        display: grid;
+        flex-direction: column;
+        
+    }
+    .vertical-line {
+        display: none;
+      }
+    .duplicado{
+        height: 1px;
+        width: 100%;
+        background-color: #e5e5e5;
+    }
+    .contenedor-costo{
+        margin-top: 10px;
+
+    }
+    /*----*/
+
+    .letras-1{
+        margin: 0;
+        margin-left: 55px;
+    }
+    .letras-1-tiempo{
+        margin: 0;
+        margin-left: 25px;
+    }
+    .sub-letras-1{
+        margin: 0;
+        margin-left: 8px;
+    }
+    .sub-letras-2{
+        margin: 0;
+        margin-left: 45px;
+    }
+    .img-1{
+        margin-left: 0;
+    }
+    .hora-ida{
+        margin-left: 55px;
+    }
+    #linea-horizontal-2.vertical-horizontal-2{
+        margin-left: 5px;
+        width: 10%;
+    }
+    .hora-llegada{
+        margin-left: 5px;
+    }
+    .tiempo-vuelo{
+        margin-left: 45px;
+    }
+    /*-------------primera parte --vuelta --------------*/
+
+    .letras-2{
+        margin: 0;
+        margin-left: 25px;
+    }
+    .letras-3{
+        margin-left: 55px;
+    }
+    .letras-1-tiempo{
+        margin: 0;
+        margin-left: 25px;
+    }
+    .sub-letras-3{
+        margin: 0;
+        margin-left: 8px;
+    }
+    .sub-letras-4{
+        margin: 0;
+        margin-left: 45px;
+    }
+    .hora-ida-2{
+        margin-left: 55px;
+    }
+    #linea-horizontal-2.vertical-horizontal-2{
+        margin-left: 5px;
+        width: 10%;
+    }
+    .hora-llegada-2{
+        margin-left: 5px;
+    }
+    .tiempo-vuelo-2{
+        margin-left: 45px;
+    }
+
+    /*-----segunda parte-----*/
+    .img-avianca{
+        margin-left: 15px;
+    }
+    .hora-ida-contenedo-2 .hora-ida-3{
+        margin-left: 55px;
+    }
+    .contenedor-3 .tiempo-vuelo-contenedo-3{
+        margin-left: 15px;
+    }
+
+    .hora-llegada-3{
+        margin-left: 5px;
+    }
+    .tiempo-vuelo-3{
+        margin-left: 45px;
+    }
+
+    .segunda-parte{
+        margin-left: 50px;
+    }
+    .contenedor-costo{
+        text-align: initial;
+        margin-left: 210px;
+    }
+    .contenedor-btn{
+        text-align: initial;
+        margin-left: 50px;
+    }
+    .btn-comprar{
+        width: 200px;
+    }
 }
