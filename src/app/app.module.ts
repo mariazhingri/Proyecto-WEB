@@ -15,6 +15,10 @@ import { EncabezadoComponent } from './modulo_alojamiento/encabezado/encabezado.
 import { DestinoComponent } from './modulo_alojamiento/destino/destino.component';
 import { AlojamientoComponent } from './modulo_alojamiento/alojamiento/alojamiento.component';
 import { AlertsFormaPagoComponent } from './Alerts/alerts-forma-pago/alerts-forma-pago.component';
+import { IdaYVueltaComponent } from './modulo_vuelos/ida-y-vuelta/ida-y-vuelta.component'; 
+import { SoloIdaComponent } from './modulo_vuelos/solo-ida/solo-ida.component';
+import { MultidestinoComponent } from './modulo_vuelos/multidestino/multidestino.component';
+import { TablaBackEndComponent } from './modulo_vuelos/tabla-back-end/tabla-back-end.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -28,6 +32,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BodyComponent } from './modulo-packagestrip/body/body.component';
 import { CarouselComponent } from './modulo-packagestrip/carousel/carousel.component';
 import { ReservaComponent } from './modulo-packagestrip/reserva/reserva.component';
+
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -46,6 +51,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './services/auth.services';
 import { DatosComponent } from './modulo-packagestrip/datos/datos.component';
+import { MatTableDataSource } from '@angular/material/table';
 
 import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
 import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
@@ -64,7 +70,11 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     PaginaPrincipalComponent,
     PersonasYClaseComponent,
     ListaVuelosComponent,
-
+    IdaYVueltaComponent,
+    SoloIdaComponent,
+    MultidestinoComponent,
+    TablaBackEndComponent,
+    
     BodyComponent,
     CarouselComponent,
     ReservaComponent,
@@ -79,7 +89,8 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     CarouselComponent,
     FooterComponent,
     AlertsFormaPagoComponent,
-    TicketsComponent
+    TicketsComponent,
+    
 
   ],
   imports: [
@@ -109,6 +120,7 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     FormsModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
+    
 
     DestinoComponent,
   ],

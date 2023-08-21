@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.component';
+import { BusquedaYListaService } from '../servicios/busqueda-y-lista.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-lista-vuelos',
@@ -10,7 +12,8 @@ import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.compon
 })
 export class ListaVuelosComponent implements OnInit{
 
-  constructor(private router: Router,private dialog:MatDialog) { }
+  ComponenteListaVuelos: boolean = false;
+  constructor(private router: Router,private dialog:MatDialog, private BusquedaYListaService: BusquedaYListaService) { }
 
   ngOnInit(): void{
   }
@@ -18,6 +21,7 @@ export class ListaVuelosComponent implements OnInit{
   openDialogformadepagp(){
     this.dialog.open(FormaDePagoComponent)
   }
+/*--------------------------------------------*/
 
 
 }

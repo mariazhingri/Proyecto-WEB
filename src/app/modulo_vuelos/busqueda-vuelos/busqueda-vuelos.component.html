@@ -3,6 +3,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 <body>
+
+  <div class="contenedor-btn-ver-vuelos">
+    <button class="btn-ver-vuelos" (click)="abrirtablabackend()">Ver Vuelos</button>
+  </div>
   
   <div class="contenedor-todo">
         
@@ -25,164 +29,19 @@
         </div>
   
         <!-- ---------------------------------------------IDA Y VUELTA----------------------------------------------------- -->
-         <!-- inputs y boton de origen y destino -->
-          <div class="contenedor-input" *ngIf="idayvuelta" [formGroup]="intercambiar">
-            <div id="inline" class="contenedor-localizacion">
-              <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
-              <input type="text" placeholder="Origen" id="inline" class="input-origen-destino" formControlName="input1">
-            </div>
-            <button class="btn-cambio" id="btn-cambio" (click)="intercambio_info()">
-             <i class="fa-solid fa-arrow-right-arrow-left" ></i>
-            </button>
-            <div id="inline" class="contenedor-localizacion">
-              <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
-              <input type="text" placeholder="Destino" id="inline" class="input-origen-destino" formControlName="input2">
-            </div>
-            
-            <!-- botones de fechas -->
-            
-          <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
-          <input  class="input-fechas"  type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
-
-            <button class="btn-cambio" (click)="abrirlista_vuelos()">
-              <!-- <fa-icon [icon]="faMagnifyingGlass"></fa-icon>-->
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
+         
+          <app-ida-y-vuelta *ngIf="idayvuelta"></app-ida-y-vuelta>
 
          <!-- ---------------------------------------------SOLO IDA----------------------------------------------------- -->
-         <!-- inputs de SOLO IDA-->
-        
-          <div class="contenedor-input" *ngIf="soloida" [formGroup]="intercambiar_solo_ida">
-            <div id="inline" class="contenedor-localizacion">
-              <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
-              <input type="text" placeholder="Origen" id="inline" class="input-origen-destino" formControlName="input1_solo_ida">
-            </div>
-            <button class="btn-cambio" id="btn-cambio" (click)="intercambio_info2()">
-              <!--<fa-icon [icon]="faArrowRightArrowLeft"></fa-icon>-->
-              <i class="fa-solid fa-arrow-right-arrow-left"></i>
-            </button>
-            <div id="inline" class="contenedor-localizacion">
-              <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
-              <input type="text" placeholder="Destino" id="inline" class="input-origen-destino" formControlName="input2_solo_ida">
-            </div>
-        
-          <!-- botones de fechas -->
-          
-          <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
-          <input  class="input-fechas" disabled style="background-color: #ced0ce;" type="date" id="fecha" name="fecha">
-
-          <button class="btn-cambio" (click)="abrirlista_vuelos()">
-            <!--<fa-icon [icon]="faMagnifyingGlass"></fa-icon>-->
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-      
+    
+        <app-solo-ida *ngIf="soloida"></app-solo-ida>
         
          <!-- ---------------------------------------------MULTIDESTINO----------------------------------------------------- -->
-        <div  class="contenedor-multidestino" *ngIf="multidestino" [formGroup]="intercambiar_multidestino">
-          <div class="contenedor-de-tramo1">
-              <p class="letra-tramo"><strong>Tramo 1</strong></p>
-              
-              <div class="contenedor-input-multidestino" style="display: flex;">
-
-              <div  class="primer-contenedor-tramo" style="display: flex;"> <!---->
-
-                <div class="contendor-primer-tramo"> <!---->
-                  <div id="inline" class="contenedor-localizacion">
-                    <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
-                  <input type="text" placeholder="Origen" id="inline" class="input-origen-destino" formControlName="input1_multidestino">
-                  </div>
-                </div>
-
-                <div class="contendor-primer-tramo-btn"> <!---->
-                  <button class="btn-cambio" id="btn-cambio" style="margin-top: 7px;" (click)="intercambio_info3()">
-                    <i  class="fa-solid fa-arrow-right-arrow-left"></i>
-                  </button>
-                </div>
-
-                <div> <!---->
-                  <div id="inline" class="contenedor-localizacion">
-                    <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
-                    <input type="text" placeholder="Destino" id="inline" class="input-origen-destino" formControlName="input2_multidestino">
-                  </div>
-                </div> 
-              </div>
-                  <!-- botones de fechas -->
-                <div class="contendor-tramo-fechas"> <!---->
-                  <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
-                  <input  class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
-                </div>
-              </div>
-          </div>
-
-      
-          <!-- segundo tramo -->
-
-          <div class="contenedor-de-tramo1" *ngFor="let div of divs">
-            <p class="letra-tramo"><strong>Tramo {{ div}}</strong></p>
-            
-            <div class="contenedor-input-multidestino" style="display: flex;">
-
-            <div  class="primer-contenedor-tramo" style="display: flex;"> <!---->
-
-              <div class="contendor-primer-tramo"> <!---->
-                <div id="inline" class="contenedor-localizacion">
-                  <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
-                <input type="text" placeholder="Origen" id="inline" class="input-origen-destino">
-                </div>
-              </div>
-
-              <div class="contendor-primer-tramo-btn"> <!---->
-                <button class="btn-cambio" id="btn-cambio" style="margin-top: 7px;">
-                  <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                </button>
-              </div>
-
-              <div> <!---->
-                <div id="inline" class="contenedor-localizacion">
-                  <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
-                  <input type="text" placeholder="Destino" id="inline" class="input-origen-destino">
-                </div>
-              </div> 
-            </div>
-                <!-- botones de fechas -->
-              <div class="contendor-tramo-fechas"> <!---->
-                <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
-                <input  class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
-
-                <button class="btn-eliminar" (click)="eliminarDiv(0)">
-                  <i class="fa-solid fa-xmark" style="color: #d02525; font-size: x-large; "></i>
-                </button>
-              </div>
-            </div>
-        </div>
-
-        
-
-        
-
-      <div class="agregar-tramo" style="display: flex;">
-        <div class=" agregar-tramo-btn">
-          <button class="btn-tramo" (click)="agregarDiv()"> 
-              <i class="fa-solid fa-plus"></i>
-              Agregar tramo
-          </button>
-        </div>
-
-        <div class="agregar-tramo-btn">
-          <button class="btn-tramo" id="btn-buscar" (click)="abrirlista_vuelos()">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              Buscar
-          </button>
-        </div>
-      </div>
-
-    </div>
+        <app-multidestino *ngIf="multidestino"></app-multidestino>
 
   </div>
   
-  <app-lista-vuelos *ngIf="lista_vuelos"></app-lista-vuelos>
+  <app-lista-vuelos *ngIf="ComponenteListaVuelos"></app-lista-vuelos>
 
 </body>
 <app-footer></app-footer>

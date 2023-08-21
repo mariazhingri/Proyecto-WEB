@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+/* primera parte (vuelos)*/
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+
+.contenedor-input{
+    margin-top: 30px;
+    text-align: center;
+    inset-inline:center;
+    
+}
+  
+/*caja de textos de origen y destino con icono de localizacion y avion*/  
+.input-origen-destino{
+    color: black;
+    padding: 15px 0px 15px 42px;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: #ebebeb;
+    border-radius: 6px;
+    font-size:medium;
+    border-style: none;
+    
+}
+
+
+/*caja de texto de fechas*/
+.input-fechas{
+    color: black;
+    padding: 15px;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: #ebebeb;
+    border-radius: 6px;
+    font-size:medium;
+    border-style: none;
+}
+#inline{
+    display: inline;
+}
+#btn-cambio{
+    margin-right: 10px;
+}
+/*estilo icono localizacion y avion*/
+.contenedor-localizacion{
+    position: relative;
+    
+}
+#icono-localizacion{
+    position: absolute;
+    font-size: 25px;
+    
+    left: 12px;
+    top: -3px;
+}
+  
+/*caja de texto de fechas*/
+.input-fechas{
+    color: black;
+    padding: 15px;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 6px;
+    font-size:medium;
+    border-style: none;
+}
+
+/*estilo icono localizacion y avion*/
+.contenedor-localizacion{
+    position: relative;
+    
+}
+#icono-localizacion{
+    position: absolute;
+    font-size: 25px;
+    left: 12px;
+    top: -3px;
+}
+
+
+/* estilo de los botones*/
+.btn-cambio{
+    margin-left: 10px;
+    padding: 18px 20px;
+    background-color: #ff7800; /* color de boton*/
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+}
+#btn-cambio{
+  margin-right: 10px;
+}
+
+#input-destino{
+    margin-left: 10px;
+}
+#fecha{
+    margin-left: 10px;
+}
+
+/*-----------------------------------------------------*/
+/* Media queries para dispositivos de pantalla pequeña */
+@media screen and (max-width: 900px) {
+  .eleccion-vuelos{
+    margin-left: 15px;
+    
+  }
+  .contenedor-localizacion{
+    
+    
+}
+.input-origen-destino,
+.input-fechas {
+  width: 100%;
+  height: 20px;
+}
+/* Estilos generales */
+.contenedor-todo {
+align-items: center;
+text-align: center;
+
+padding: 0rem 2%;
+margin-left:50px ;
+margin-right: 50px;
+margin-block-end: 50px;
+
+}
+
+/* Estilos para la sección de elección de vuelos */
+  .eleccion-vuelos {
+
+  }
+  .contenedor-input{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-block-end: 20px;
+    
+  }
+  .btn-cambio{
+    margin-left: 0;
+    width: 111%;
+    margin: 0;
+    
+    
+  }
+  .input-fechas{
+    margin-left: 0;
+  }
+  .input-origen-destino{
+    margin-left: 0;
+    width: 100%;
+  }
+  .contenedor-localizacion{
+    margin: 0;
+  }
+
+  
+
+}
+  /*-----------------------------------------------------*/
+ /* Media queries para dispositivos de pantalla mediana */
+@media screen and (max-width: 700px) {
+
+    .contenedor-localizacion{
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        
+    }
+    .input-origen-destino,
+    .input-fechas {
+      width: 100%;
+      height: 20px;
+    }
+    /* Estilos generales */
+.contenedor-todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 2rem 5%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para la sección de elección de vuelos */
+  .eleccion-vuelos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+  #btn-cambio{
+    margin-left: 18px;
+  }
+  .primeros-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilos para los inputs de origen y destino */
+  .contenedor-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+  }
+  
+  .input-origen-destino {
+    width: 89%;
+    height: 30px;
+  }
+  #icono-localizacion{
+    margin-top: 27px;
+  }
+
+  .btn-cambio {
+    width: 110%;
+    height: 50px;
+  }
+  
+  .input-fechas {
+    width: 95%;
+    height: 40px;
+  }
+  
+  
+
+}
+  
+  /* Media queries para dispositivos de pantalla extra pequeña */
+  @media screen and (max-width: 400px) {
+    .contenedor-localizacion{
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      
+  }
+  .input-origen-destino,
+  .input-fechas {
+    width: 100%;
+    height: 20px;
+  }
+  /* Estilos generales */
+.contenedor-todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 2rem 5%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Estilos para la sección de elección de vuelos */
+.eleccion-vuelos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+}
+#btn-cambio{
+  margin-left: 18px;
+}
+.primeros-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para los inputs de origen y destino */
+.contenedor-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.input-origen-destino {
+  width: 89%;
+  height: 30px;
+}
+#icono-localizacion{
+  margin-top: 27px;
+}
+
+.btn-cambio {
+  width: 110%;
+  height: 50px;
+}
+
+.input-fechas {
+  width: 95%;
+  height: 40px;
+}
+
+  }

@@ -1,0 +1,22 @@
+<div class="contenedor-input" [formGroup]="intercambiar">
+    <div id="inline" class="contenedor-localizacion">
+      <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
+      <input type="text" placeholder="Origen" id="inline" class="input-origen-destino" formControlName="input1">
+    </div>
+    <button class="btn-cambio" id="btn-cambio" (click)="intercambio_info()">
+      <i class="fa-solid fa-arrow-right-arrow-left"></i>
+    </button>
+    <div id="inline" class="contenedor-localizacion">
+      <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
+      <input type="text" placeholder="Destino" id="inline" class="input-origen-destino" formControlName="input2">
+    </div>
+
+  <!-- botones de fechas -->
+  
+  <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;" formControlName="fecha_ida">
+  <input  class="input-fechas" disabled style="background-color: #ced0ce;" type="date" id="fecha" name="fecha">
+
+  <button class="btn-cambio" (click)="validar_fomulario()" [disabled]="!intercambiar.valid">
+    <i class="fa-solid fa-magnifying-glass" ></i>
+  </button>
+</div>
