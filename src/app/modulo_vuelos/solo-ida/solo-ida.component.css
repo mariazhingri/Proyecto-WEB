@@ -7,41 +7,9 @@
     font-family: 'Poppins', sans-serif;
     
 }
-body{
-    overflow-y: auto;
 
-}
-html{
-    background-image: url('../../../assets/img/galapagos_fondo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    
-}
-.contenedor-todo{
-    flex: 1 1 30rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-    margin-top: 150px;
-    margin-left: 200px;
-    margin-right: 200px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    
-}
-/* primera parte (vuelos)*/
-.letra-vuelo{
-    color: #ff7800;
-    font-size: 22px;
-    margin-right: 20px;
-}
-.eleccion-vuelos{
-    margin-left: 160px;
-    margin-top: 20px;  
-    display: flex;
-    align-items: center;  
+input.ng-invalid.ng-touched {
+  border: 2px solid red;
 }
 
 .btn-primero{
@@ -85,7 +53,219 @@ html{
     color: white;
   }
 
+      /* panel de busqueda de vuelos*/
   
+/*caja de textos de origen y destino con icono de localizacion y avion*/  
+.input-origen-destino{
+    color: black;
+    padding: 15px 0px 15px 42px;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: #ebebeb;
+    border-radius: 6px;
+    font-size:medium;
+    border-style: none;
+    
+}
+
+
+/*caja de texto de fechas*/
+.input-fechas{
+    color: black;
+    padding: 15px;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: #ebebeb;
+    border-radius: 6px;
+    font-size:medium;
+    border-style: none;
+}
+#inline{
+    display: inline;
+}
+#btn-cambio{
+    margin-right: 10px;
+}
+/*estilo icono localizacion y avion*/
+.contenedor-localizacion{
+    position: relative;
+    
+}
+#icono-localizacion{
+    position: absolute;
+    font-size: 25px;
+    
+    left: 12px;
+    top: -3px;
+}
+
+
+/* estilo de los botones*/
+.btn{
+    margin-left: 10px;
+    padding: 18px 20px;
+    background-color: #ff7800; /* color de boton*/
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+}
+#input-destino{
+    margin-left: 10px;
+}
+#fecha{
+    margin-left: 10px;
+}
+/**----------------------------------estilo de IDA Y VUELTA---------------------------------------------*/
+  
+/*caja de textos de origen y destino con icono de localizacion y avion*/  
+
+
+/*caja de texto de fechas*/
+.input-fechas{
+    color: black;
+    padding: 15px;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 6px;
+    font-size:medium;
+    border-style: none;
+}
+#inline{
+    display: inline;
+}
+
+/*estilo icono localizacion y avion*/
+.contenedor-localizacion{
+    position: relative;
+    
+}
+#icono-localizacion{
+    position: absolute;
+    font-size: 25px;
+    left: 12px;
+    top: -3px;
+}
+
+
+/* estilo de los botones*/
+.btn-cambio{
+    margin-left: 10px;
+    padding: 18px 20px;
+    background-color: #ff7800; /* color de boton*/
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+}
+
+#input-destino{
+    margin-left: 10px;
+}
+#fecha{
+    margin-left: 10px;
+}
+
+/**----------------------------------estilo de MULTIDESTINO---------------------------------------------*/
+
+.contenedor-multidestino{
+    margin-top: 40px;
+    margin-left: 65px;
+    margin-right: 100px;
+}
+.contenedor-de-tramo1{
+    margin-left: 30px;
+}
+.letra-tramo{
+  margin-left: 0 ;
+}
+/* contenedor de input origen, destino y fechas*/
+.contenedor-input-multidestino{
+    text-align: center;
+}
+.contenedor-input-1{
+    margin-left: 30px;
+}
+/* letras parrado "tramo"*/
+.contenedor-multidestino p{
+    font-size: 22px;
+    margin-left: 95px;
+    color: #ff7800;
+    margin-top: 10px;
+}
+/* estilo de botones*/
+.btn{
+    margin-left: 10px;
+    padding: 18px 20px;
+    background-color: #234A66; 
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+}
+
+#fecha{
+    margin-left: 10px;
+}
+/* boton eliminar*/
+.btn-eliminar{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.agregar-tramo{
+    margin-left: 90px;
+    margin-top: 30px;
+}
+#btn-buscar{
+    margin-left: 600px;
+    padding: 18px 30px;
+    
+}
+
+/**-----------------------------------------------------------------*/
+/*caja de textos de origen y destino con icono de localizacion y avion*/  
+
+
+
+/*caja de texto de fechas*/
+.input-fechas{
+    color: black;
+    padding: 15px;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 6px;
+    font-size:medium;
+    border-style: none;
+}
+#inline{
+    display: inline;
+}
+#btn-cambio{
+    margin-right: 10px;
+}
+/*estilo icono localizacion*/
+.contenedor-localizacion{
+    position: relative;
+    
+}
+#icono-localizacion{
+    position: absolute;
+    font-size: 25px;
+    left: 12px;
+    top: -3px;
+}
+.btn-tramo{
+    padding: 18px 20px;
+    background-color: #ff7800; /* color de boton*/
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+}
 
 /*-----------------------------------------------------*/
 /* Media queries para dispositivos de pantalla pequeña */

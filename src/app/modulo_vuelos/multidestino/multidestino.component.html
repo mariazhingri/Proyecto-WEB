@@ -1,0 +1,96 @@
+<div  class="contenedor-multidestino" [formGroup]="intercambiar">
+    <div class="contenedor-de-tramo1">
+        <p class="letra-tramo"><strong>Tramo 1</strong></p>
+        
+        <div class="contenedor-input-multidestino" style="display: flex;">
+
+        <div  class="primer-contenedor-tramo" style="display: flex;"> <!---->
+
+          <div class="contendor-primer-tramo"> <!---->
+            <div id="inline" class="contenedor-localizacion">
+              <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
+            <input type="text" placeholder="Origen" id="inline" class="input-origen-destino" formControlName="input1">
+            </div>
+          </div>
+
+          <div class="contendor-primer-tramo-btn"> <!---->
+            <button class="btn-cambio" id="btn-cambio" style="margin-top: 7px;" (click)="intercambio_info()">
+              <i  class="fa-solid fa-arrow-right-arrow-left"></i>
+            </button>
+          </div>
+
+          <div> <!---->
+            <div id="inline" class="contenedor-localizacion">
+              <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
+              <input type="text" placeholder="Destino" id="inline" class="input-origen-destino" formControlName="input2">
+            </div>
+          </div> 
+        </div>
+            <!-- botones de fechas -->
+          <div class="contendor-tramo-fechas"> <!---->
+            <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;"formControlName="fecha_ida">
+            <input  class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;"formControlName="fecha_vuelta">
+          </div>
+        </div>
+    </div>
+
+
+    <!-- segundo tramo -->
+
+    <div class="contenedor-de-tramo1" *ngFor="let div of divs">
+      <p class="letra-tramo"><strong>Tramo {{ div}}</strong></p>
+      
+      <div class="contenedor-input-multidestino" style="display: flex;">
+
+      <div  class="primer-contenedor-tramo" style="display: flex;"> <!---->
+
+        <div class="contendor-primer-tramo"> <!---->
+          <div id="inline" class="contenedor-localizacion">
+            <i id="icono-localizacion" class="fa-solid fa-location-dot" style="color: #3f4045;"></i>
+          <input type="text" placeholder="Origen" id="inline" class="input-origen-destino">
+          </div>
+        </div>
+
+        <div class="contendor-primer-tramo-btn"> <!---->
+          <button class="btn-cambio" id="btn-cambio" style="margin-top: 7px;" (click)="intercambio_info()">
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+          </button>
+        </div>
+
+        <div> <!---->
+          <div id="inline" class="contenedor-localizacion">
+            <i id="icono-localizacion" class="fa-solid fa-plane" style="color: #3f4045; "></i>
+            <input type="text" placeholder="Destino" id="inline" class="input-origen-destino">
+          </div>
+        </div> 
+      </div>
+          <!-- botones de fechas -->
+        <div class="contendor-tramo-fechas"> <!---->
+          <input class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
+          <input  class="input-fechas" type="date" id="fecha" name="fecha" style="background-color: #ebebeb;">
+
+          <button class="btn-eliminar" (click)="eliminarDiv(0)">
+            <i class="fa-solid fa-xmark" style="color: #d02525; font-size: x-large; "></i>
+          </button>
+        </div>
+      </div>
+  </div>
+
+
+<div class="agregar-tramo" style="display: flex;">
+  <div class=" agregar-tramo-btn">
+    <button class="btn-tramo" (click)="agregarDiv()"> 
+        <i class="fa-solid fa-plus"></i>
+        Agregar tramo
+    </button>
+  </div>
+
+  <div class="agregar-tramo-btn">
+    <button class="btn-tramo" id="btn-buscar" (click)="validar_fomulario()" [disabled]="!intercambiar.valid">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Buscar
+    </button>
+  </div>
+</div>
+
+</div>
