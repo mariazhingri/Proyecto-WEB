@@ -69,7 +69,7 @@ section {
 }
 
 .table-container {
-  max-height: 400px;
+  max-height: 300px;
   overflow-y: auto; 
 }
 
@@ -127,12 +127,10 @@ section {
   flex-grow: 1;
 }
 
-
-
 mat-card {
   /* margin: 1rem 4rem 5%; */
-  margin-bottom: 1rem;
-  padding: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
   background: rgba(231, 236, 244, 0.361);
   backdrop-filter: blur(15px);
 }
