@@ -30,7 +30,8 @@ export class LoginComponent implements OnInit{
   }
   
 
-  onSubmit(){
+  onSubmit() 
+  {
 
     if (this.usuarioLogin.value.usuario=="grupo10" && this.usuarioLogin.value.password=="123")
     {      
