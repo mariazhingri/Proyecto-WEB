@@ -66,7 +66,7 @@ import { PaqueteviajeService } from './services/paqueteviaje.service';
 
 
 //import { FirstComponent } from './modulo-packagestrip/first/first.component';
-//import { LoginComponent } from './modulo-packagestrip/login/login.component';
+
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
