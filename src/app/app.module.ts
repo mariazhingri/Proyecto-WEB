@@ -18,10 +18,8 @@ import { AlertsFormaPagoComponent } from './Alerts/alerts-forma-pago/alerts-form
 import { IdaYVueltaComponent } from './modulo_vuelos/ida-y-vuelta/ida-y-vuelta.component'; 
 import { SoloIdaComponent } from './modulo_vuelos/solo-ida/solo-ida.component';
 import { MultidestinoComponent } from './modulo_vuelos/multidestino/multidestino.component';
-<<<<<<< HEAD
 import { TablaBackEndComponent } from './modulo_vuelos/tabla-back-end/tabla-back-end.component';
-=======
->>>>>>> f62f93a70fe9b2aac573adbbb54e3964b723bc0b
+
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -58,6 +56,14 @@ import { MatTableDataSource } from '@angular/material/table';
 
 import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
 import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
+import { CrudComponent } from './crud/crud.component';
+import { EditCrudComponent } from './edit-crud/edit-crud.component';
+import { CreateCrudComponent } from './create-crud/create-crud.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { PaqueteviajeService } from './services/paqueteviaje.service';
+
 
 //import { FirstComponent } from './modulo-packagestrip/first/first.component';
 //import { LoginComponent } from './modulo-packagestrip/login/login.component';
@@ -76,12 +82,7 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     IdaYVueltaComponent,
     SoloIdaComponent,
     MultidestinoComponent,
-<<<<<<< HEAD
     TablaBackEndComponent,
-    
-=======
-
->>>>>>> f62f93a70fe9b2aac573adbbb54e3964b723bc0b
     BodyComponent,
     CarouselComponent,
     ReservaComponent,
@@ -97,8 +98,9 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     FooterComponent,
     AlertsFormaPagoComponent,
     TicketsComponent,
-    
-
+    CrudComponent,
+    EditCrudComponent,
+    CreateCrudComponent,
   ],
   imports: [
     BrowserModule,
@@ -127,11 +129,12 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     FormsModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    
+    MatPaginatorModule,
+    HttpClientModule,
 
     DestinoComponent,
   ],
-  providers: [SericiodebtninciosesionService, AuthService],
+  providers: [SericiodebtninciosesionService, AuthService, PaqueteviajeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

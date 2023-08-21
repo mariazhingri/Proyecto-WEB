@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit{
   constructor(private headerService: SericiodebtninciosesionService, private router: Router, private dialogRef: MatDialogRef<LoginComponent>) { 
     
   }
-  
+     
 
   onSubmit() 
   {

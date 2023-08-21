@@ -2,53 +2,62 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ReservaComponent } from '../reserva/reserva.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { CrudComponent } from '../../crud/crud.component';
 import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.component';
-
 
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.css']
+  styleUrls: ['./body.component.css'],
 })
-
-
 export class BodyComponent implements OnInit {
   snackbar: any;
 
-  constructor(private dialog: MatDialog, private snackBar: MatSnackBar){}
+  constructor(private dialog: MatDialog, private snackBar: MatSnackBar) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(ReservaComponent, {
-    });
-  
-    dialogRef.afterClosed().subscribe(result => {
+    const dialogRef = this.dialog.open(ReservaComponent, {});
+
+    dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.snackBar.open('Datos completados con éxito', '', {
-          duration: 3000
+          duration: 3000,
         });
       } else {
         this.snackBar.open('Reserva cancelada', '', {
-          duration: 3000
+          duration: 3000,
         });
       }
     });
   }
-  
 
-  
-  /*openDialog(){
-    this.dialog.open(ReservaComponent) 
+
+  openCrud(): void {
+    const dialogRef = this.dialog.open(CrudComponent, {});
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.snackBar.open('Datos completados con éxito', '', {
+          duration: 3000,
+        });
+      } else {
+        this.snackBar.open('Reserva cancelada', '', {
+          duration: 3000,
+        });
+      }
+    });
+  }
+
+  /*openCrud() {
+    this.dialog.open(CrudComponent);
   }*/
   
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
   private breakpointObserver = inject(BreakpointObserver);
 
   /** Based on the screen size, switch from standard to one column per row */
@@ -59,7 +68,7 @@ export class BodyComponent implements OnInit {
           { title: 'Card 1', cols: 1, rows: 1 },
           { title: 'Card 2', cols: 1, rows: 1 },
           { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
+          { title: 'Card 4', cols: 1, rows: 1 },
         ];
       }
 
@@ -67,7 +76,7 @@ export class BodyComponent implements OnInit {
         { title: 'Card 1', cols: 2, rows: 1 },
         { title: 'Card 2', cols: 1, rows: 1 },
         { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
+        { title: 'Card 4', cols: 1, rows: 1 },
       ];
     })
   );
