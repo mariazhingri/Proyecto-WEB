@@ -17,9 +17,10 @@
     <a routerLink="/BusquedaVuelosComponent">Vuelos</a>
     <a routerLink="/AlojamientoComponent">Alojamientos</a>
     <a routerLink="/BodyComponent">Paquetes de viaje</a>
+    <!-- <a routerLink="/CrudComponent">Reservas</a> -->
     <!-- <a href="#">Paquetes de viaje</a> --> 
-
-   <p *ngIf="mostrarUsuario" class="letra-usuario"> Bienvenid@, {{ nombreUsuario}} </p>
+  <p class="username" *ngIf="mostrarUsuario" >Bienvenid@, {{ getUsernamee() }} </p>
+  <!-- <p *ngIf="mostrarUsuario" class="letra-usuario"> Bienvenid@, {{ getUsernamee() }} </p> -->
   </nav>
   
   <div class="icons">

@@ -11,8 +11,10 @@ import { ListaVuelosComponent } from './modulo_vuelos/lista-vuelos/lista-vuelos.
 import { BodyComponent } from './modulo-packagestrip/body/body.component';
 import { CarouselComponent } from './modulo-packagestrip/carousel/carousel.component';
 import { ReservaComponent } from './modulo-packagestrip/reserva/reserva.component';
+
 import { TablaBackEndComponent } from './modulo_vuelos/tabla-back-end/tabla-back-end.component';
 
+import { CrudComponent } from './crud/crud.component';
 //import { LoginComponent } from './modulo-packagestrip/login/login.component';
 //import { HeaderComponent } from './modulo-packagestrip/header/header.component';
 //import { FirstComponent } from './modulo-packagestrip/first/first.component';
@@ -40,6 +42,8 @@ const routes: Routes = [
   { path: 'CarouselComponent', component: CarouselComponent },
   { path: 'ReservaComponent', component: ReservaComponent },
   { path: 'CarritoCompraComponent', component: CarritoCompraComponent },
+  { path: 'CrudComponent', component: CrudComponent },
+  
 
   { path: 'EncabezadoComponent', component: EncabezadoComponent },
   { path: 'AlojamientoComponent', component: AlojamientoComponent }

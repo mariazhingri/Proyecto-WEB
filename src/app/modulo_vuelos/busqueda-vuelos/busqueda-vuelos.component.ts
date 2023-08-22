@@ -10,8 +10,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BusquedaYListaService } from '../servicios/busqueda-y-lista.service';
 import { Subscription } from 'rxjs';
 
-import { TablaBackEndComponent } from '../tabla-back-end/tabla-back-end.component';
 import { TablaPComponent } from '../tabla-p/tabla-p.component';
+import { TablaBackEndComponent } from '../tabla-back-end/tabla-back-end.component';
 
 
 
@@ -80,6 +80,7 @@ export class BusquedaVuelosComponent implements OnInit{
     this.lista_vuelos = true;
   }
 
+
   ngOnInit(): void{
     
   }
@@ -90,7 +91,6 @@ export class BusquedaVuelosComponent implements OnInit{
   abrirtablabackend(){
     this.dialog.open(TablaPComponent)
   }
-
 
 }
 

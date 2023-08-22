@@ -1,32 +1,50 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { PaqueteViajeInterface } from '../interfaces/PaqueteViajeInterface';
+import { UsuarioInterface } from '../interfaces/UsuarioInterface';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+  baseUrl: string = 'https://localhost:7266/api/Usuario/GetUsuario';
+  constructor(private http: HttpClient) {}
+
+  login(user: UsuarioInterface){
+      return this.http.post(this.baseUrl, user);
+  }
+
+  get getUsername(){
+      return localStorage.getItem('userName');
+  }
+
+  get isAutenticado(){
+      return !!localStorage.getItem('token_value');
+  }
+
+
   //public loggedIn: boolean = false;
   private loggedIn: boolean = false;
-  private username: string;
+  private usernamee: string = "";
 
-  constructor() {
-    this.username = '';
-   }
+  /*constructor() {
+    this.username = '';*/
 
 
-setUsername(username: string) {
-  this.username = username;
-}
 
-getUsername(): string {
-  return this.username;
-}
+  setUsername(username: string) {
+    this.usernamee = username;
+  }
 
+  getUsernamee(): string {
+    return this.usernamee;
+  }
+  
   isLoggedIn(): boolean {
     return this.loggedIn;
   }
 
-  login() {
+  loginn() {
     this.loggedIn = true;
   }
 

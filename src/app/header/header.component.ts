@@ -8,7 +8,7 @@ import { SericiodebtninciosesionService } from '../sericiodebtninciosesion.servi
 import { Subscription } from 'rxjs';
 import { PaginaPrincipalComponent } from '../pagina-principal/pagina-principal.component';
 import { BodyComponent } from '../modulo-packagestrip/body/body.component';
-
+import { AuthService } from '../services/auth.services';
 
 @Component({
   selector: 'app-header',
@@ -22,11 +22,16 @@ export class HeaderComponent implements OnInit, OnDestroy{
   showSecondElement: boolean = false;
   mostrarUsuario: boolean = false;
   navElementSubject: boolean = false;
-  
+  loggedIn: boolean = false;
+
   private subscription: Subscription;
 
   /*---------------------------------------------------*/
-  constructor(private router: Router, private dialog:MatDialog, private headerService: SericiodebtninciosesionService) { 
+  constructor(
+    private router: Router, 
+    private authService: AuthService,
+    private dialog:MatDialog, 
+    private headerService: SericiodebtninciosesionService) { 
 
     this.subscription = this.headerService.showFirstElement$.subscribe(show => {
       this.showFirstElement = show;
@@ -66,6 +71,14 @@ export class HeaderComponent implements OnInit, OnDestroy{
 
   openDialogSesion(){
     this.dialog.open(LoginComponent)
+  }
+
+  getUsernamee(): string {
+    return this.authService.getUsernamee();
+  }
+  
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
   }
 
   cerrarsesion(){

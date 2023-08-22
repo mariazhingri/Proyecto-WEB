@@ -57,9 +57,17 @@ import { MatTableDataSource } from '@angular/material/table';
 
 import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
 import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
+import { CrudComponent } from './crud/crud.component';
+import { EditCrudComponent } from './edit-crud/edit-crud.component';
+import { CreateCrudComponent } from './create-crud/create-crud.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { PaqueteviajeService } from './services/paqueteviaje.service';
+
 
 //import { FirstComponent } from './modulo-packagestrip/first/first.component';
-//import { LoginComponent } from './modulo-packagestrip/login/login.component';
+
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -79,6 +87,7 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     TablaPComponent,
     
 
+
     BodyComponent,
     CarouselComponent,
     ReservaComponent,
@@ -94,8 +103,9 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     FooterComponent,
     AlertsFormaPagoComponent,
     TicketsComponent,
-    
-
+    CrudComponent,
+    EditCrudComponent,
+    CreateCrudComponent,
   ],
   imports: [
     BrowserModule,
@@ -124,11 +134,12 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     FormsModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    
+    MatPaginatorModule,
+    HttpClientModule,
 
     DestinoComponent,
   ],
-  providers: [SericiodebtninciosesionService, AuthService],
+  providers: [SericiodebtninciosesionService, AuthService, PaqueteviajeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
