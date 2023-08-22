@@ -1,26 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { Router } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog } from '@angular/material/dialog';
+import { ReservavuelosService } from '../servicios/reservavuelos.service';
 
 
-export interface PeriodicElement {
-  id: number;
-  origen: string;
-  destino: string;
-  fecha_ida: string;
-  fecha_vuelta: string;
-  btn_cliqueado: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, origen: 'Guayaquil', destino: 'Quito', fecha_ida: '2023-08-21',fecha_vuelta: '2023-08-29',btn_cliqueado:'Ida y Vuelta'},
-  {id: 2, origen: 'Cuenca', destino: 'Manta', fecha_ida: '2023-10-09',fecha_vuelta: '',btn_cliqueado:'Solo Ida'}
-  
-];
 
 @Component({
   selector: 'app-tabla-back-end',
@@ -29,13 +16,38 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class TablaBackEndComponent {
 
-  constructor(private router: Router,private dialog:MatDialog) { }
-
+  dataSource: any = [];
   displayedColumns: string[] = ['id', 'origen', 'destino', 'fecha_ida','fecha_vuelta','btn_cliqueado'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
+  tabla_vuelo = [
+    {id: 1, 
+      origen: 'Guayaquil', 
+      destino: 'Quito', 
+      fecha_ida: new Date('2023-08-01'),
+      fecha_vuelta: new Date('2023-10-15'),
+      btn_cliqueado:'Ida y Vuelta'
+    },
+    
+    {id: 2, 
+      origen: 'Cuenca', 
+      destino: 'Manta', 
+      fecha_ida: new Date('2023-09-02'),
+      fecha_vuelta: '',
+      btn_cliqueado:'Solo Ida'
+    }
+  ];
+
+  constructor(private router: Router,private dialog:MatDialog, private service: ReservavuelosService) { 
+  
+  }
+
+
+
+  
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+
 }

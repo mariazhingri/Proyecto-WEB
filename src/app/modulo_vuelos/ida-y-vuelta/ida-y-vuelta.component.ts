@@ -3,7 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BusquedaYListaService } from '../servicios/busqueda-y-lista.service';
 import { Subscription } from 'rxjs';
-
+import { CRUD } from '../tabla-p/tabla-p.component';
+import { ReservavuelosService } from '../servicios/reservavuelos.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-ida-y-vuelta',
@@ -17,10 +19,14 @@ export class IdaYVueltaComponent {
   datosCargados = false;
   //datosContador: any;
 
+  dataSource: MatTableDataSource<any>;
+
   ComponenteListaVuelos: boolean = false;
 
-  constructor(private router: Router, private formBuilder: FormBuilder,private BusquedaYListaService: BusquedaYListaService) {
+  constructor(private router: Router, private formBuilder: FormBuilder,private BusquedaYListaService: BusquedaYListaService, private ReservavuelosService:ReservavuelosService) {
 
+    this.dataSource = new MatTableDataSource(this.datosGuardados);
+    
     this.intercambiar = this.formBuilder.group({
       input1: ['', Validators.required],
       input2: ['', Validators.required],
@@ -73,7 +79,7 @@ ngOnInit() {
 async mostrar_info() {
   this.BusquedaYListaService.toggleComponenteListaVuelos(true);
   await this.esperarDatosCargados();
-  console.log('Datos guardados:', this.datosGuardados);
+  console.log('Array:', this.datosGuardados);
 }
 
 private esperarDatosCargados(): Promise<void> {
@@ -95,6 +101,23 @@ validar_formulario() {
     console.log('El formulario no es válido. Verifica los campos ingresados.');
   }
 }
+
+/*agregarusuario(){
+  console.log(this.intercambiar)
+
+  const lista_crud: CRUD = {
+    id:this.intercambiar.value.id,
+    origen: this.intercambiar.value.origen,
+    destino: this.intercambiar.value.destino,
+    fecha_ida: this.intercambiar.value.fecha_ida,
+    fecha_vuelta: this.intercambiar.value.fecha_vuelta,
+    btn_cliqueado:this.intercambiar.value.btn_cliqueado
+  }
+  console.log(lista_crud)
+
+  this.ReservavuelosService.agregarusuario(lista_crud);
+  //this.dialogRef.close();
+ }*/
 
 }
 

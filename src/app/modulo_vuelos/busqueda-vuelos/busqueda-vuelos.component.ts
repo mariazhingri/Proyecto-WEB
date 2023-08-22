@@ -9,10 +9,10 @@ import { FormaDePagoComponent } from 'src/app/forma-de-pago/forma-de-pago.compon
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BusquedaYListaService } from '../servicios/busqueda-y-lista.service';
 import { Subscription } from 'rxjs';
-<<<<<<< HEAD
+
 import { TablaBackEndComponent } from '../tabla-back-end/tabla-back-end.component';
-=======
->>>>>>> f62f93a70fe9b2aac573adbbb54e3964b723bc0b
+import { TablaPComponent } from '../tabla-p/tabla-p.component';
+
 
 
 @Component({
@@ -79,19 +79,19 @@ export class BusquedaVuelosComponent implements OnInit{
   abrirlista_vuelos(){
     this.lista_vuelos = true;
   }
-ngOnInit(): void{
-  
-}
 
-<<<<<<< HEAD
-  abrirtablabackend(){
-    this.dialog.open(TablaBackEndComponent)
+  ngOnInit(): void{
+    
   }
 
-=======
+  /*abrirtablabackend(){
+    this.router.navigate(['/TablaBackEndComponent']);
+  }*/
+  abrirtablabackend(){
+    this.dialog.open(TablaPComponent)
+  }
 
 
->>>>>>> f62f93a70fe9b2aac573adbbb54e3964b723bc0b
 }
 
 

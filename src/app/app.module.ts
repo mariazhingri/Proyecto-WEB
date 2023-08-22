@@ -18,10 +18,8 @@ import { AlertsFormaPagoComponent } from './Alerts/alerts-forma-pago/alerts-form
 import { IdaYVueltaComponent } from './modulo_vuelos/ida-y-vuelta/ida-y-vuelta.component'; 
 import { SoloIdaComponent } from './modulo_vuelos/solo-ida/solo-ida.component';
 import { MultidestinoComponent } from './modulo_vuelos/multidestino/multidestino.component';
-<<<<<<< HEAD
 import { TablaBackEndComponent } from './modulo_vuelos/tabla-back-end/tabla-back-end.component';
-=======
->>>>>>> f62f93a70fe9b2aac573adbbb54e3964b723bc0b
+
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -35,6 +33,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BodyComponent } from './modulo-packagestrip/body/body.component';
 import { CarouselComponent } from './modulo-packagestrip/carousel/carousel.component';
 import { ReservaComponent } from './modulo-packagestrip/reserva/reserva.component';
+import { TablaPComponent } from './modulo_vuelos/tabla-p/tabla-p.component';
 
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -76,12 +75,10 @@ import { TicketsComponent } from './modulo_vuelos/tickets/tickets.component';
     IdaYVueltaComponent,
     SoloIdaComponent,
     MultidestinoComponent,
-<<<<<<< HEAD
     TablaBackEndComponent,
+    TablaPComponent,
     
-=======
 
->>>>>>> f62f93a70fe9b2aac573adbbb54e3964b723bc0b
     BodyComponent,
     CarouselComponent,
     ReservaComponent,

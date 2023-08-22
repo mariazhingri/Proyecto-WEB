@@ -11,6 +11,7 @@ import { ListaVuelosComponent } from './modulo_vuelos/lista-vuelos/lista-vuelos.
 import { BodyComponent } from './modulo-packagestrip/body/body.component';
 import { CarouselComponent } from './modulo-packagestrip/carousel/carousel.component';
 import { ReservaComponent } from './modulo-packagestrip/reserva/reserva.component';
+import { TablaBackEndComponent } from './modulo_vuelos/tabla-back-end/tabla-back-end.component';
 
 //import { LoginComponent } from './modulo-packagestrip/login/login.component';
 //import { HeaderComponent } from './modulo-packagestrip/header/header.component';
@@ -20,6 +21,7 @@ import { ReservaComponent } from './modulo-packagestrip/reserva/reserva.componen
 import { EncabezadoComponent } from './modulo_alojamiento/encabezado/encabezado.component';
 import { AlojamientoComponent } from './modulo_alojamiento/alojamiento/alojamiento.component';
 import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
+import { TablaPComponent } from './modulo_vuelos/tabla-p/tabla-p.component';
 
 
 const routes: Routes = [
@@ -31,6 +33,8 @@ const routes: Routes = [
   { path: 'BusquedaVuelosComponent', component: BusquedaVuelosComponent },
   { path: 'HeaderComponent', component: HeaderComponent },
   { path: 'ListaVuelosComponent', component: ListaVuelosComponent },
+  { path: 'TablaBackEndComponent', component: TablaBackEndComponent },
+  { path: 'TablaPComponent', component: TablaPComponent },
 
   { path: 'BodyComponent', component: BodyComponent },
   { path: 'CarouselComponent', component: CarouselComponent },
